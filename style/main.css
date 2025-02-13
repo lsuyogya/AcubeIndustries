@@ -102,10 +102,17 @@ body {
 .line {
   position: relative;
 }
+.line:before {
+  background: white;
+  opacity: 0.4;
+  position: absolute;
+  inset: 0;
+  content: "";
+}
 .line:after {
   position: absolute;
   inset: 0;
-  background-color: red;
+  background-color: #ebc554;
   content: "";
   transform: scaleX(0);
   transition: transform 400ms ease;
@@ -124,4 +131,7 @@ body {
 
 .parallexColumns + .txtContent {
   transition: opacity 200ms ease-in-out;
+}
+
+.pageDown {
 }
