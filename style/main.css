@@ -258,3 +258,57 @@ section.services .card:hover .txtWrapper .title {
 .projectCard .rightContent .txt {
   margin-top: 1rem;
 }
+
+.YtVidWrapper::after {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  content: "";
+}
+
+footer svg {
+  background: gray;
+  stroke: black;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 1.6rem;
+  height: auto;
+  fill: white;
+  position: relative;
+}
+/* footer svg::before {
+  display: block;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: gray;
+  content: "";
+  position: absolute;
+  } */
+
+footer svg:is(.feather-facebook, .feather-linkedin, .feather-twitter) {
+  stroke: transparent;
+}
+footer svg:is(.feather-instagram, .feather-youtube) {
+  stroke: white;
+  fill: transparent;
+}
+
+footer svg:hover {
+  background: var(--color-golden);
+}
+footer a {
+  transition: color 300ms ease;
+}
+footer svg {
+  transition: background-color 300ms ease;
+}
+
+footer a:hover {
+  color: var(--color-golden);
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}

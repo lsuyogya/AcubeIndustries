@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./style/splide.min.css" />
     <link rel="stylesheet" href="./style/output.css" />
     <script defer src="./scripts/splide.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
+      defer
+    ></script>
     <script defer src="./scripts/main.js"></script>
   </head>
   <body>
@@ -25,24 +29,20 @@
       <div class="container mx-auto">
         <div class="flex justify-between">
           <img src="./images/WHITE ACUBE INDUSTRIES.png" alt="" />
-          <div class="flex flex-wrap align-middle gap-4">
+          <div class="flex flex-wrap align-middle gap-12">
             <a href="#" class="contents">
-              <button class="bg-white rounded-full px-4 py-2 max-h-max my-auto">
+              <button
+                class="bg-white rounded-full px-4 py-2 max-h-max my-auto hover:text-(--color-gold)"
+              >
                 Contact Us
               </button>
             </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#e8eaed"
-              class="my-auto"
-            >
-              <path
-                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-              />
-            </svg>
+            <div class="hamburger my-auto text-white uppercase tracking-wide">
+              <div class="line h-[1px] w-full bg-white my-1"></div>
+              <div class="line h-[1px] w-full bg-white my-1"></div>
+              <div class="line h-[1px] w-full bg-white my-1"></div>
+              Menu
+            </div>
           </div>
         </div>
       </div>
@@ -350,5 +350,75 @@
         </div>
       </div>
     </section>
+
+    <section class="relative w-full z-10 bg-dark pb-12">
+      <div class="container mx-auto pt-32">
+        <div class="txtWrapper text-white text-center leading-[1.2] font-light">
+          <h1 class="text-8xl">
+            Sustainability at the <br />
+            heart of our craft
+          </h1>
+          <br />
+          <p class="max-w-[80ch] mx-auto text-xl tracking-wider">
+            At Acube Industries, exceptional design goes hand-in-hand with
+            sustainability. We are committed to reducing environmental impact
+            through innovative practices and responsible sourcing.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="relative bg-dark-white">
+      <div class="container mx-auto">
+        <!-- <video
+          src="./videos/vid1.mp4"
+          class="aspect-video object-cover w-full h-max"
+          autoplay
+          loop
+          ></video> -->
+        <a href="#" class="contents">
+          <div class="YtVidWrapper aspect-video relative">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/GL9Ah_r6ykc?si=5bcdM389GsHYtyPs&autoplay=1&mute=1&controls=0&playlist=GL9Ah_r6ykc&loop=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              controls="0"
+              class="aspect-video object-cover w-full h-auto"
+            ></iframe>
+          </div>
+        </a>
+      </div>
+    </section>
+    <footer class="bg-white relative py-12">
+      <div class="container mx-auto">
+        <div class="flex gap-24">
+          <img src="./images/Acube industries Gold.png" alt="" />
+          <div class="col">
+            <p><a href="#">+971 6 528 5120</a></p>
+            <p><a href="#">info@acubeindustries.ae</a></p>
+          </div>
+          <div class="col">
+            <p>
+              Unit R04-01, Level P2, The Onyx Tower 1, <br />
+              Sheik Zayed Road, Dubai, UAE
+            </p>
+          </div>
+          <div class="col">
+            <div class="flex gap-4">
+              <i data-feather="facebook"></i>
+              <i data-feather="instagram"></i>
+              <i data-feather="twitter"></i>
+              <i data-feather="linkedin"></i>
+              <i data-feather="youtube"></i>
+            </div>
+            <p>Copyright © 2025 Acube Industries All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
