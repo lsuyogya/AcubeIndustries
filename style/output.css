@@ -640,6 +640,9 @@
   .h-max {
     height: max-content;
   }
+  .max-h-\[700px\] {
+    max-height: 700px;
+  }
   .max-h-max {
     max-height: max-content;
   }

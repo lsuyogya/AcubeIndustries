@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const header = document.querySelector("header");
-  console.log(header);
-  body.style.setProperty("--headerHeight", header.offsetHeight + "px");
-  body.style.setProperty("--vh", window.innerHeight + "px");
-  body.style.setProperty("--vw", window.innerWidth + "px");
+  function bodyStyles() {
+    body.style.setProperty("--headerHeight", header.offsetHeight + "px");
+    body.style.setProperty("--vh", window.innerHeight + "px");
+    body.style.setProperty("--vw", window.innerWidth + "px");
+  }
 
   document.addEventListener("scroll", () => {
     const scrollX = window.scrollX + "px";
@@ -50,7 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", updateOpacity);
   window.addEventListener("resize", updateOpacity); // Handle screen resize
+  window.addEventListener("resize", bodyStyles); // Handle screen resize
   updateOpacity(); // Initialize on page load
+  bodyStyles(); // Initialize on page load
 
   var splide = new Splide("#splideProjectsLeft", {
     arrows: false,
