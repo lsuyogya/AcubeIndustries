@@ -133,5 +133,63 @@ body {
   transition: opacity 200ms ease-in-out;
 }
 
-.pageDown {
+section.services {
+  height: auto;
+  background: linear-gradient(
+    to bottom,
+    var(--color-dark) 0%,
+    var(--color-dark) 49.9%,
+    #fff 50%,
+    #fff 100%
+  );
+}
+
+section.services .imgWrapper {
+  aspect-ratio: 2/3;
+  position: relative;
+  scale: 1;
+  transition: scale 400ms ease;
+}
+section.services .imgWrapper:after {
+  position: absolute;
+  background-color: black;
+  opacity: 0.3;
+  inset: 0;
+  content: "";
+  scale: 1;
+  transition: scale 400ms ease;
+}
+section.services .imgWrapper img {
+  aspect-ratio: 2/3;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1;
+  transition: scale 400ms ease;
+}
+section.services .txtWrapper {
+  color: white;
+}
+section.services .card .txtWrapper .title {
+  transition: color 300ms ease;
+}
+
+section.services .card .descWrapper {
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease;
+}
+
+section.services .card:hover .descWrapper {
+  grid-template-rows: 1fr;
+}
+section.services .card:hover {
+  z-index: 1;
+}
+section.services .card:hover .imgWrapper,
+section.services .card:hover .imgWrapper:after,
+section.services .card:hover .imgWrapper img {
+  scale: 1.05;
+}
+section.services .card:hover .txtWrapper .title {
+  color: #d9c8a9;
 }

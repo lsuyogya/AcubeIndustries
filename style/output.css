@@ -531,6 +531,9 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
+  .inset-4 {
+    inset: calc(var(--spacing) * 4);
+  }
   .inset-x-0 {
     inset-inline: calc(var(--spacing) * 0);
   }
@@ -573,6 +576,9 @@
   .my-auto {
     margin-block: auto;
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
@@ -584,6 +590,12 @@
   }
   .mb-\[250vh\] {
     margin-bottom: 250vh;
+  }
+  .line-clamp-6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
   }
   .block {
     display: block;
@@ -630,8 +642,14 @@
   .-rotate-90 {
     rotate: calc(90deg * -1);
   }
+  .transform {
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
   .resize {
     resize: both;
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -663,6 +681,9 @@
   .overflow-clip {
     overflow: clip;
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -681,8 +702,15 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .text-center {
+    text-align: center;
+  }
   .align-middle {
     vertical-align: middle;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -696,8 +724,19 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
   .text-white {
     color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
   .opacity-60 {
     opacity: 60%;
@@ -808,6 +847,55 @@ body {
 .parallexColumns + .txtContent {
   transition: opacity 200ms ease-in-out;
 }
+section.services {
+  height: auto;
+  background: linear-gradient( to bottom, var(--color-dark) 0%, var(--color-dark) 49.9%, #fff 50%, #fff 100% );
+}
+section.services .imgWrapper {
+  aspect-ratio: 2/3;
+  position: relative;
+  scale: 1;
+  transition: scale 400ms ease;
+}
+section.services .imgWrapper:after {
+  position: absolute;
+  background-color: black;
+  opacity: 0.3;
+  inset: 0;
+  content: "";
+  scale: 1;
+  transition: scale 400ms ease;
+}
+section.services .imgWrapper img {
+  aspect-ratio: 2/3;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1;
+  transition: scale 400ms ease;
+}
+section.services .txtWrapper {
+  color: white;
+}
+section.services .card .txtWrapper .title {
+  transition: color 300ms ease;
+}
+section.services .card .descWrapper {
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease;
+}
+section.services .card:hover .descWrapper {
+  grid-template-rows: 1fr;
+}
+section.services .card:hover {
+  z-index: 1;
+}
+section.services .card:hover .imgWrapper, section.services .card:hover .imgWrapper:after, section.services .card:hover .imgWrapper img {
+  scale: 1.05;
+}
+section.services .card:hover .txtWrapper .title {
+  color: #d9c8a9;
+}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -833,4 +921,37 @@ body {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewX(0);
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewY(0);
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
 }
