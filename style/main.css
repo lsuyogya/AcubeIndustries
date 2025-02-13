@@ -1,0 +1,127 @@
+/* npx @tailwindcss/cli -i ./style/main.css -o ./style/output.css --watch */
+
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #282630;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("../fonts/Urbanist-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* Define weight range for variable font */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Import Urbanist Italic Variable Font */
+@font-face {
+  font-family: "Urbanist";
+  src: url("../fonts/Urbanist-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* Define weight range for variable font */
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  font-family: "Urbanist";
+}
+
+.bannerVid {
+  height: calc(100vh + 5rem * 2);
+  margin-top: -5rem;
+  pointer-events: none;
+  z-index: -1;
+  background-color: var(--color-dark);
+}
+
+.bannerContent {
+  z-index: 0;
+  color: white;
+  position: relative;
+}
+
+.darkgradOverlay:after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(0, 0, 0, 0.7) 25%,
+    rgba(0, 0, 0, 0.7) 75%,
+    rgba(0, 0, 0, 0.8) 90%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.parallexColumns {
+  --startPoint: 100vh;
+  --endPoint: 250vh;
+  --scrollRange: calc(
+    var(--endPoint) - var(--startPoint)
+  ); /* Total scroll distance */
+  --progress: calc((var(--scrollY) - var(--startPoint)) / var(--scrollRange));
+  will-change: opacity;
+  opacity: clamp(0, calc(1 - abs(2 * var(--progress) - 1)), 0.5);
+}
+.parallexColumns .column {
+  --multiplier: 1;
+  will-change: transform;
+  transform: translateY(
+    calc((var(--startPoint) - var(--scrollY)) * var(--multiplier))
+  );
+}
+
+.verticalText {
+  writing-mode: vertical-rl;
+  -webkit-text-orientation: sideways;
+  text-orientation: sideways;
+  scale: -1;
+}
+.circleBefore {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  opacity: 0.6;
+  transition: opacity 300ms ease 400ms;
+}
+
+.circleBefore:before {
+  content: "";
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background-color: #ebc554;
+  display: block;
+  margin-block: auto;
+}
+
+.line {
+  position: relative;
+}
+.line:after {
+  position: absolute;
+  inset: 0;
+  background-color: red;
+  content: "";
+  transform: scaleX(0);
+  transition: transform 400ms ease;
+  will-change: transform;
+  transform-origin: 0;
+}
+.moreDiv {
+  cursor: pointer;
+}
+.moreDiv:hover .line:after {
+  transform: scaleX(1);
+}
+.moreDiv:hover .circleBefore {
+  opacity: 1;
+}
+
+.parallexColumns + .txtContent {
+  transition: opacity 200ms ease-in-out;
+}
