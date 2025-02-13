@@ -4,6 +4,7 @@
 
 @theme {
   --color-dark: #282630;
+  --color-golden: #d9c8a9;
 }
 
 @font-face {
@@ -130,11 +131,10 @@ body {
 }
 
 .parallexColumns + .txtContent {
-  transition: opacity 200ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
 }
 
-section.services {
-  height: auto;
+.bg-dark-white {
   background: linear-gradient(
     to bottom,
     var(--color-dark) 0%,
@@ -191,5 +191,70 @@ section.services .card:hover .imgWrapper img {
   scale: 1.05;
 }
 section.services .card:hover .txtWrapper .title {
-  color: #d9c8a9;
+  color: var(--color-golden);
+}
+.projectSlideBtn {
+  --gray: #c4c4c4;
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: block;
+  transition: border-color 300ms ease, color 300ms ease;
+}
+.projectSlideBtn:hover {
+  --gray: var(--color-golden);
+  cursor: pointer;
+}
+.projectCard h2 {
+  margin-block-end: 2rem;
+}
+.projectCard {
+  background-color: #ededed;
+  padding-inline-start: 5rem;
+  padding-block-start: 5rem;
+  padding-block-end: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  color: #989898;
+}
+.container:has(.projectCard) {
+  position: relative;
+}
+
+.projectCard .leftContent {
+  display: grid;
+  gap: 3rem;
+  grid-auto-rows: max-content;
+}
+
+.projectCard .readMoreBtn {
+  background-color: transparent;
+  border: 1px solid #c4c4c4;
+  max-width: max-content;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 200vmax;
+  transition: border-color 300ms ease, color 300ms ease;
+}
+.projectCard .readMoreBtn:hover {
+  border-color: var(--color-golden);
+  color: var(--color-golden);
+}
+.projectCard .rightContent {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 1rem;
+  max-width: 55%;
+}
+.projectCard .rightContent img {
+  /* aspect-ratio: 900 / 607; */
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.projectCard .rightContent .txt {
+  margin-top: 1rem;
 }

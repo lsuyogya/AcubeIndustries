@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acube Insudtries</title>
+    <link rel="stylesheet" href="./style/splide.min.css" />
     <link rel="stylesheet" href="./style/output.css" />
+    <script defer src="./scripts/splide.min.js"></script>
     <script defer src="./scripts/main.js"></script>
   </head>
   <body>
-    <header class="w-full z-20 relative">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="arrow-icon" viewBox="0 0 227.096 227.096">
+        <g id="SVGRepo_iconCarrier">
+          <polygon
+            style="fill: currentColor"
+            points="152.835,39.285 146.933,45.183 211.113,109.373 0,109.373 0,117.723 211.124,117.723 146.933,181.902 152.835,187.811 227.096,113.55"
+          />
+        </g>
+      </symbol>
+    </svg>
+
+    <header class="w-full z-20 relative py-4">
       <div class="container mx-auto">
         <div class="flex justify-between">
           <img src="./images/WHITE ACUBE INDUSTRIES.png" alt="" />
@@ -36,7 +49,7 @@
     </header>
     <!-- Banner -->
     <section
-      class="w-full min-h-[100vh] relative overflow-clip mt-[-61px] mb-[250vh] z-10"
+      class="w-full min-h-[100vh] relative overflow-clip -mt-(--headerHeight) mb-[250vh] z-10"
     >
       <div
         class="absolute inset-0 m-auto darkgradOverlay min-h-[100vh] overflow-clip"
@@ -55,11 +68,12 @@
       </div>
       <div class="container mx-auto absolute inset-x-0 bottom-6">
         <div class="bannerContent">
-          <h1 class="flex gap-4">
-            <span class="-rotate-90 block max-w-max content-end text-xl"
+          <h1 class="flex">
+            <span
+              class="verticalText block max-w-max content-center text-2xl mb-4"
               >We</span
             >
-            <span class="text-6xl"> Define Standards. </span>
+            <span class="text-9xl"> Define Standards. </span>
           </h1>
         </div>
       </div>
@@ -68,7 +82,7 @@
     <!-- About Section -->
     <section class="fixed inset-0 w-full overflow-clip bg-dark">
       <div
-        class="parallexColumns flex absolute gap-6 w-full place-content-end -rotate-15"
+        class="parallexColumns flex absolute gap-6 w-full place-content-end -rotate-15 translate-x-[5%] -translate-y-[10%]"
       >
         <div class="column grid gap-6">
           <img src="./images/panel/panel01-min.jpg" alt="" />
@@ -126,11 +140,11 @@
         </div>
       </div>
       <div
-        class="txtContent container absolute inset-0 max-h-max mx-auto my-auto w-full text-white text-3xl"
+        class="txtContent container absolute inset-0 max-h-max mx-auto my-auto w-full text-white text-4xl"
       >
         <div class="flex flex-wrap gap-12 content-center">
           <p
-            class="verticalText max-w-max max-h-max text-xl opacity-60 self-end"
+            class="verticalText max-w-max max-h-max text-2xl opacity-60 self-end"
           >
             About Acube Industries
           </p>
@@ -152,11 +166,14 @@
           <div
             class="line flex-1 h-[2px] my-auto rounded-full overflow-clip"
           ></div>
-          <span class="circleBefore text-xl">More Detail</span>
+          <span class="circleBefore text-2xl">More Detail</span>
         </div>
       </div>
     </section>
-    <section class="services relative w-full z-10 min-h-[100vh] content-center">
+    <!-- services -->
+    <section
+      class="services relative w-full z-10 min-h-[100vh] content-center bg-dark-white"
+    >
       <div class="container mx-auto my-auto grid grid-cols-4">
         <div class="card relative">
           <div class="imgWrapper">
@@ -234,6 +251,99 @@
                   retail, commercial, residential, entertainment, and
                   hospitality purposes.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- projects Section -->
+    <section class="relative bg-white min-h-[100vh] z-10 content-center">
+      <div class="container mx-auto">
+        <h2 class="text-6xl mb-12">Projects</h2>
+      </div>
+
+      <div class="container mx-auto">
+        <div class="projectCard w-[70%] bg-red ml-20">
+          <div class="leftContent">
+            <div class="btnHolder flex gap-6">
+              <button class="projectSlideBtn" data-page="prev">
+                <svg width="24" height="24" style="scale: -1 1">
+                  <use href="#arrow-icon"></use>
+                </svg>
+              </button>
+              <button class="projectSlideBtn" data-page="next">
+                <svg width="24" height="24">
+                  <use href="#arrow-icon"></use>
+                </svg>
+              </button>
+            </div>
+            <div id="splideProjectsLeft" class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="contentWrapper grid gap-12">
+                      <img src="./images/vega.png" alt="" />
+                      <p class="text-lg tracking-wider">
+                        Vega incorporates carefully chosen elements to bring the
+                        outdoors in, creating a rejuvenating living environment.
+                      </p>
+                      <button class="readMoreBtn">Read More</button>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="contentWrapper grid gap-12">
+                      <img src="./images/vega.png" alt="" />
+                      <p class="text-lg tracking-wider">
+                        Vega incorporates carefully chosen elements to bring the
+                        outdoors in, creating a rejuvenating living environment.
+                      </p>
+                      <button class="readMoreBtn">Read More</button>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="contentWrapper grid gap-12">
+                      <img src="./images/vega.png" alt="" />
+                      <p class="text-lg tracking-wider">
+                        Vega incorporates carefully chosen elements to bring the
+                        outdoors in, creating a rejuvenating living environment.
+                      </p>
+                      <button class="readMoreBtn">Read More</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="rightContent">
+            <div id="splideProjectsRight" class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="contentWrapper">
+                      <img src="./images/industries-pics/vega.png" alt="" />
+                      <p class="txt uppercase">
+                        Interior / Exterior / Planning
+                      </p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="contentWrapper">
+                      <img src="./images/industries-pics/electra.png" alt="" />
+                      <p class="txt uppercase">
+                        Interior / Exterior / Planning
+                      </p>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="contentWrapper">
+                      <img src="./images/industries-pics/vega.png" alt="" />
+                      <p class="txt uppercase">
+                        Interior / Exterior / Planning
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
