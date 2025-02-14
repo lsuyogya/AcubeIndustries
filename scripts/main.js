@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (scrollRatio < 4) {
           const closestDiv = span.closest("div");
           const closestDivTop = closestDiv.getBoundingClientRect().top;
-          top = (top - closestDivTop) / 450;
-          left = left / 1000 / 2;
+          top = (top - closestDivTop) / 550;
+          left = left / 1000 / 1.5;
           const opacityValue =
             scrollRatio - (top + left) < 0.1 ? 0.1 : scrollRatio - (top + left);
           span.style.opacity = opacityValue;
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const viewportHeight = window.innerHeight;
 
     const startPoint = 50 * (viewportHeight / 100); // Convert 100vh to px
-    const endPoint = 250 * (viewportHeight / 100); // Convert 250vh to px
+    const endPoint = 300 * (viewportHeight / 100); // Convert 250vh to px
     const scrollRange = endPoint - startPoint;
 
     const maxOpacity = 0.3; // Change this to your desired max opacity
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Apply additional logic for `.txtContent`
     const txtContentOpacity = Math.max(
       0,
-      (scrollY - (125 * viewportHeight) / 100) / 100
+      (scrollY - (105 * viewportHeight) / 100) / 100
     );
     document.querySelector(".txtContent").style.opacity = txtContentOpacity;
   }
