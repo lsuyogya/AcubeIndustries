@@ -21,6 +21,52 @@ document.addEventListener("DOMContentLoaded", () => {
     column.style.setProperty("--multiplier", multiplier);
   });
 
+  function txtOpacity() {
+    const rootElement = document.querySelector(
+      ".parallexColumns + .txtContent div:has(> p:first-child):has(> p:last-child)"
+    );
+    const paras = rootElement.querySelectorAll("p");
+
+    paras.forEach((para) => {
+      let htmlString = "";
+      let letterArray = para.textContent.split("");
+      letterArray.forEach((letter, index) => {
+        if (letter != "") htmlString += `<span>${letterArray[index]}</span>`;
+      });
+      para.innerHTML = htmlString;
+    });
+
+    const spans = rootElement.querySelectorAll("span");
+    //VH calculation, persoanl monitor reference;
+    const startPointPx = 2000;
+    const endPointPx = 2400;
+    const vhPx = 959;
+    const startPointVh = startPointPx / vhPx;
+    const endPointVh = endPointPx / vhPx;
+
+    const trueStartPointPx = window.innerHeight * startPointVh;
+    function reveal() {
+      spans.forEach((span) => {
+        let { top, left } = span.getBoundingClientRect();
+        const scrollRatio = window.scrollY / trueStartPointPx;
+        if (scrollRatio < 4) {
+          const closestDiv = span.closest("div");
+          const closestDivTop = closestDiv.getBoundingClientRect().top;
+          top = (top - closestDivTop) / 450;
+          left = left / 1000 / 2;
+          const opacityValue =
+            scrollRatio - (top + left) < 0.1 ? 0.1 : scrollRatio - (top + left);
+          span.style.opacity = opacityValue;
+          span.style.setProperty("--top", top);
+          span.style.setProperty("--left", left);
+          span.style.setProperty("--trueStartingPoint", trueStartPointPx);
+        }
+      });
+    }
+    document.addEventListener("scroll", reveal);
+    reveal();
+  }
+
   function updateOpacity() {
     const scrollY = window.scrollY;
     const viewportHeight = window.innerHeight;
@@ -86,4 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   feather.replace();
+
+  txtOpacity();
 });

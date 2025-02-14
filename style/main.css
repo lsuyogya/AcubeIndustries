@@ -58,8 +58,8 @@ body {
 }
 
 .parallexColumns {
-  --startPoint: 100vh;
-  --endPoint: 250vh;
+  --startPoint: calc(100vh);
+  --endPoint: calc(350vh);
   --scrollRange: calc(
     var(--endPoint) - var(--startPoint)
   ); /* Total scroll distance */
@@ -311,4 +311,9 @@ footer a:hover {
 
 a {
   cursor: pointer;
+}
+
+.parallexColumns + .txtContent p:not(.verticalText) span {
+  opacity: 0.1;
+  /* transition: opacity 5ms ease; */
 }
