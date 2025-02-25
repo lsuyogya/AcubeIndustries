@@ -1,15 +1,17 @@
 /* npx @tailwindcss/cli -i ./style/main.css -o ./style/output.css --watch */
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-dark: #282630;
+  /* --color-dark: #282630; */
+  --color-dark: #000;
   --color-golden: #d9c8a9;
+  --color-yellow: #b7973e;
 }
 
 @font-face {
-  font-family: "Urbanist";
-  src: url("../fonts/Urbanist-VariableFont_wght.ttf") format("truetype");
+  font-family: 'Urbanist';
+  src: url('../fonts/Urbanist-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900; /* Define weight range for variable font */
   font-style: normal;
   font-display: swap;
@@ -17,15 +19,15 @@
 
 /* Import Urbanist Italic Variable Font */
 @font-face {
-  font-family: "Urbanist";
-  src: url("../fonts/Urbanist-Italic-VariableFont_wght.ttf") format("truetype");
+  font-family: 'Urbanist';
+  src: url('../fonts/Urbanist-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900; /* Define weight range for variable font */
   font-style: italic;
   font-display: swap;
 }
 
 body {
-  font-family: "Urbanist";
+  font-family: 'Urbanist';
 }
 
 .bannerVid {
@@ -45,7 +47,7 @@ body {
 .darkgradOverlay:after {
   position: absolute;
   inset: 0;
-  content: "";
+  content: '';
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.3) 0%,
@@ -67,6 +69,7 @@ body {
   will-change: opacity;
   opacity: clamp(0, calc(1 - abs(2 * var(--progress) - 1)), 0.5);
 }
+
 .parallexColumns .column {
   --multiplier: 1;
   will-change: transform;
@@ -81,6 +84,14 @@ body {
   text-orientation: sideways;
   scale: -1;
 }
+@media (max-width: 1000px) {
+  .verticalMobileReset {
+    writing-mode: initial;
+    -webkit-text-orientation: initial;
+    text-orientation: initial;
+    scale: 1;
+  }
+}
 .circleBefore {
   align-content: center;
   display: flex;
@@ -91,7 +102,7 @@ body {
 }
 
 .circleBefore:before {
-  content: "";
+  content: '';
   height: 0.75rem;
   width: 0.75rem;
   border-radius: 50%;
@@ -108,13 +119,13 @@ body {
   opacity: 0.4;
   position: absolute;
   inset: 0;
-  content: "";
+  content: '';
 }
 .line:after {
   position: absolute;
   inset: 0;
   background-color: #ebc554;
-  content: "";
+  content: '';
   transform: scaleX(0);
   transition: transform 400ms ease;
   will-change: transform;
@@ -155,7 +166,7 @@ section.services .imgWrapper:after {
   background-color: black;
   opacity: 0.3;
   inset: 0;
-  content: "";
+  content: '';
   scale: 1;
   transition: scale 400ms ease;
 }
@@ -219,6 +230,9 @@ section.services .card:hover .txtWrapper .title {
   grid-template-columns: 1fr 1fr;
   color: #989898;
 }
+.container {
+  @apply px-4;
+}
 .container:has(.projectCard) {
   position: relative;
 }
@@ -263,7 +277,7 @@ section.services .card:hover .txtWrapper .title {
   position: absolute;
   inset: 0;
   z-index: 10;
-  content: "";
+  content: '';
 }
 
 footer svg {
@@ -316,4 +330,126 @@ a {
 .parallexColumns + .txtContent p:not(.verticalText) span {
   opacity: 0.1;
   /* transition: opacity 5ms ease; */
+}
+
+/* .menuOverlay {
+  position: fixed;
+  z-index: 1;
+  color: black;
+  height: 100vh;
+  width: 100vw;
+} */
+
+.close {
+  --diagonal: clamp(2rem, 1rem + 5vw, 4rem);
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: var(--diagonal);
+  height: var(--diagonal);
+  opacity: 0.3;
+  transition: opacity 400ms ease-in-out;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: calc(15 / 33 * 100%);
+  content: ' ';
+  height: var(--diagonal);
+  width: 3px;
+  background-color: #fff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.menuNav {
+  grid-auto-rows: max-content;
+}
+.menuNav a {
+  padding-inline-start: calc(var(--order) * 2.5%);
+  opacity: 0.6;
+  transition: opacity 400ms ease-in-out;
+}
+.menuNav a:hover {
+  opacity: 1;
+}
+
+/* .menuOverlay .imgWrapper:after {
+  background-image: radial-gradient(
+    circle,
+    rgba(30, 67, 82, 0.5),
+    rgba(30, 67, 82, 0.6),
+    rgba(30, 67, 82, 0.9),
+    rgba(30, 67, 82, 1)
+  );
+  content: '';
+  position: absolute;
+  inset: 0;
+} */
+
+.grid-item-left .menuImg {
+  opacity: 0.5;
+  transition: opacity 1s ease-in-out;
+}
+.grid-item-left:hover .menuImg {
+  opacity: 0.4;
+}
+
+.container-half {
+  width: 100%;
+  @media (width >= 64rem) {
+    max-width: calc(64rem / 2);
+  }
+  @media (width >= 80rem) {
+    max-width: calc(80rem / 2);
+  }
+  @media (width >= 96rem) {
+    max-width: calc(96rem / 2);
+  }
+}
+
+.grid-auto-row-max {
+  grid-auto-rows: max-content;
+}
+
+.accordionGrid .accordionContent {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 400ms ease-in-out;
+}
+.accordionGrid:hover .accordionContent {
+  grid-template-rows: 1fr;
+}
+
+.menuOverlay {
+  pointer-events: none;
+}
+
+[data-menu='open'] .menuOverlay {
+  pointer-events: initial;
+}
+.menuOverlay :is(.grid-item-right, .grid-item-left) {
+  transition: transform 500ms ease-in-out;
+}
+
+.menuOverlay .grid-item-left {
+  transform: translateY(100vh);
+}
+.menuOverlay .grid-item-right {
+  transform: translateY(-100vh);
+}
+[data-menu='open'] .menuOverlay :is(.grid-item-left, .grid-item-right) {
+  transform: translateY(0vh);
+}
+
+body[data-menu='open'] {
+  overflow: hidden;
 }

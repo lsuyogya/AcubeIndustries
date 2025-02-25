@@ -2,42 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Acube Insudtries</title>
-    <link rel="stylesheet" href="./style/splide.min.css" />
-    <link rel="stylesheet" href="./style/output.css" />
-    <script defer src="./scripts/splide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="./style/splide.min.css" />
+    <link
+      rel="stylesheet"
+      href="./style/output.css" />
+    <script
+      defer
+      src="./scripts/splide.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
+      defer></script>
+    <script
       defer
-    ></script>
-    <script defer src="./scripts/main.js"></script>
+      src="./scripts/main.js"></script>
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="arrow-icon" viewBox="0 0 227.096 227.096">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style="display: none">
+      <symbol
+        id="arrow-icon"
+        viewBox="0 0 227.096 227.096">
         <g id="SVGRepo_iconCarrier">
           <polygon
             style="fill: currentColor"
-            points="152.835,39.285 146.933,45.183 211.113,109.373 0,109.373 0,117.723 211.124,117.723 146.933,181.902 152.835,187.811 227.096,113.55"
-          />
+            points="152.835,39.285 146.933,45.183 211.113,109.373 0,109.373 0,117.723 211.124,117.723 146.933,181.902 152.835,187.811 227.096,113.55" />
         </g>
+      </symbol>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style="display: none">
+      <symbol
+        id="icon-next"
+        viewBox="0 0 24 24">
+        <path
+          d="M10.22,9.28a.75.75,0,0,1,0-1.06l2.72-2.72H.75A.75.75,0,0,1,.75,4H12.938L10.22,1.281A.75.75,0,1,1,11.281.22l4,4a.749.749,0,0,1,0,1.06l-4,4a.75.75,0,0,1-1.061,0Z"
+          transform="translate(4.25 7.25)"
+          fill="currentColor" />
       </symbol>
     </svg>
 
     <header class="w-full z-20 relative py-4">
       <div class="container mx-auto">
         <div class="flex justify-between">
-          <img src="./images/WHITE ACUBE INDUSTRIES.png" alt="" />
+          <img
+            src="./images/WHITE ACUBE INDUSTRIES.png"
+            alt="" />
           <div class="flex flex-wrap align-middle gap-12">
-            <a href="#" class="contents">
+            <a
+              href="#"
+              class="contents">
               <button
-                class="bg-white rounded-full px-4 py-2 max-h-max my-auto transition hover:text-golden"
-              >
+                class="bg-white rounded-full px-4 py-2 max-h-max my-auto transition hover:text-golden">
                 Contact Us
               </button>
             </a>
-            <div class="hamburger my-auto text-white uppercase tracking-wide">
+            <div
+              class="hamburger cursor-pointer my-auto text-white uppercase tracking-wide">
               <div class="line h-[1px] w-full bg-white my-1"></div>
               <div class="line h-[1px] w-full bg-white my-1"></div>
               <div class="line h-[1px] w-full bg-white my-1"></div>
@@ -47,13 +75,167 @@
         </div>
       </div>
     </header>
+
+    <div class="menuOverlay bg-transparent fixed h-screen w-screen z-20 top-0">
+      <div class="grid grid-cols-2 h-full w-full">
+        <a
+          href="#"
+          class="contents">
+          <div
+            class="grid-item-left py-12 px-18 bg-black hidden md:flex flex-wrap relative moreDiv cursor-pointer">
+            <div class="imgWrapper absolute inset-0">
+              <img
+                src="./images/industries-pics/adhara.png"
+                alt=""
+                class="menuImg object-cover h-full w-full" />
+            </div>
+            <div
+              class="self-end z-1 text-xl relative mt-auto text-white flex w-full max-h-max">
+              <div
+                class="flex flex-wrap justify-between gap-x-4 gap-y-2 w-full grow container-half ml-auto font-light">
+                <span class="uppercase content-center">Vega</span>
+                <span
+                  class="uppercase flex flex-wrap content-center items-center"
+                  >View Project
+                  <svg
+                    width="32px"
+                    height="32px"
+                    fill="black">
+                    <use href="#icon-next"></use>
+                  </svg>
+                </span>
+                <div class="line w-full h-[2px] before:!opacity-100"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <div class="bg-yellow grid-item-right col-span-2 md:col-span-1">
+          <div
+            class="px-24 py-15 pt-32 grid grid-auto-row-max content-between relative h-full container-half mr-auto">
+            <nav class="menuNav text-white grid gap-6 text-4xl font-light">
+              <a
+                href="#"
+                class="uppercase block"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="uppercase block"
+                >About Us</a
+              >
+
+              <div class="grid accordionGrid">
+                <a
+                  href="#"
+                  class="uppercase">
+                  <div class="accordionTitle">Services</div>
+                </a>
+                <div class="accordionContent">
+                  <div class="overflow-hidden">
+                    <ul class="py-2 pl-8 text-xl">
+                      <li class="flex gap-4 content-center items-center">
+                        <a
+                          href="#"
+                          class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                          >Service 1</a
+                        >
+                        <a
+                          href="#"
+                          class="text-lg transition-colors duration-400 ease-in-out"
+                          >Service 1.1</a
+                        >
+                        <a
+                          href="#"
+                          class="text-lg transition-colors duration-400 ease-in-out"
+                          >Service 1.2</a
+                        >
+                      </li>
+                      <li class="flex gap-4 content-center items-center">
+                        <a
+                          href="#"
+                          class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                          >Service 1</a
+                        >
+                        <a
+                          href="#"
+                          class="text-lg transition-colors duration-400 ease-in-out"
+                          >Service 1.1</a
+                        >
+                        <a
+                          href="#"
+                          class="text-lg transition-colors duration-400 ease-in-out"
+                          >Service 1.2</a
+                        >
+                      </li>
+                      <li class="flex gap-4 content-center items-center">
+                        <a
+                          href="#"
+                          class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                          >Service 1</a
+                        >
+                        <a
+                          href="#"
+                          class="text-lg transition-colors duration-400 ease-in-out"
+                          >Service 1.1</a
+                        >
+                        <a
+                          href="#"
+                          class="text-lg transition-colors duration-400 ease-in-out"
+                          >Service 1.2</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="#"
+                class="uppercase block"
+                >Projects</a
+              >
+              <a
+                href="#"
+                class="uppercase block"
+                >Media</a
+              >
+              <a
+                href="#"
+                class="uppercase block"
+                >Contacts
+              </a>
+            </nav>
+            <div class="close"></div>
+            <div
+              class="self-end z-1 text-xl relative mt-auto text-white flex flex-wrap gap-12 w-full max-h-max">
+              <span>
+                T:
+                <a
+                  href="tel:+97165285120"
+                  class="underline underline-offset-3 decoration-1"
+                  >+971 6 528 5120</a
+                >
+              </span>
+              <span>
+                E:
+                <a
+                  href="mailto:info@acubeindustries.ae"
+                  class="underline underline-offset-2 decoration-1"
+                  >info@acubeindustries.ae</a
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Banner -->
     <section
-      class="w-full min-h-[100vh] relative overflow-clip -mt-(--headerHeight) mb-[350vh] z-10"
-    >
+      class="w-full min-h-[100vh] relative overflow-clip -mt-(--headerHeight) min-[1000px]:mb-[350vh] z-10">
       <div
-        class="absolute inset-0 m-auto darkgradOverlay min-h-[100vh] overflow-clip"
-      >
+        class="absolute inset-0 m-auto darkgradOverlay min-h-[100vh] overflow-clip">
         <iframe
           width="560"
           height="315"
@@ -63,8 +245,7 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
-          class="w-full h-auto aspect-video object-center bannerVid"
-        ></iframe>
+          class="w-full h-auto aspect-video object-center bannerVid"></iframe>
       </div>
       <div class="container mx-auto absolute inset-x-0 bottom-6">
         <div class="bannerContent">
@@ -80,72 +261,154 @@
     </section>
 
     <!-- About Section -->
-    <section class="fixed inset-0 w-full overflow-clip bg-dark">
+    <section
+      class="max-[1000px]:static fixed inset-0 w-full overflow-clip bg-dark">
       <div
-        class="parallexColumns flex absolute gap-6 w-full place-content-end -rotate-15 translate-x-[5%] -translate-y-[10%]"
-      >
+        class="parallexColumns max-[1000px]:hidden flex absolute gap-6 w-full place-content-end -rotate-15 translate-x-[5%] -translate-y-[10%]">
         <div class="column grid gap-6">
-          <img src="./images/panel/panel01-min.jpg" alt="" />
-          <img src="./images/panel/panel02-min.jpg" alt="" />
-          <img src="./images/panel/panel03-min.jpg" alt="" />
-          <img src="./images/panel/panel04-min.jpg" alt="" />
-          <img src="./images/panel/panel05-min.jpg" alt="" />
-          <img src="./images/panel/panel06-min.jpg" alt="" />
-          <img src="./images/panel/panel07-min.jpg" alt="" />
+          <img
+            src="./images/panel/panel01-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel02-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel03-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel04-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel05-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel06-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel07-min.jpg"
+            alt="" />
         </div>
         <div class="column grid gap-6">
-          <img src="./images/panel/panel08-min.jpg" alt="" />
-          <img src="./images/panel/panel09-min.jpg" alt="" />
-          <img src="./images/panel/panel10-min.jpg" alt="" />
-          <img src="./images/panel/panel11-min.jpg" alt="" />
-          <img src="./images/panel/panel12-min.jpg" alt="" />
-          <img src="./images/panel/panel13-min.jpg" alt="" />
-          <img src="./images/panel/panel14-min.jpg" alt="" />
+          <img
+            src="./images/panel/panel08-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel09-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel10-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel11-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel12-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel13-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel14-min.jpg"
+            alt="" />
         </div>
         <div class="column grid gap-6">
-          <img src="./images/panel/panel15-min.jpg" alt="" />
-          <img src="./images/panel/panel16-min.jpg" alt="" />
-          <img src="./images/panel/panel17-min.jpg" alt="" />
-          <img src="./images/panel/panel18-min.jpg" alt="" />
-          <img src="./images/panel/panel19-min.jpg" alt="" />
-          <img src="./images/panel/panel20-min.jpg" alt="" />
-          <img src="./images/panel/panel21-min.jpg" alt="" />
+          <img
+            src="./images/panel/panel15-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel16-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel17-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel18-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel19-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel20-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel21-min.jpg"
+            alt="" />
         </div>
         <div class="column grid gap-6">
-          <img src="./images/panel/panel22-min.jpg" alt="" />
-          <img src="./images/panel/panel23-min.jpg" alt="" />
-          <img src="./images/panel/panel24-min.jpg" alt="" />
-          <img src="./images/panel/panel25-min.jpg" alt="" />
-          <img src="./images/panel/panel26-min.jpg" alt="" />
-          <img src="./images/panel/panel27-min.jpg" alt="" />
-          <img src="./images/panel/panel28-min.jpg" alt="" />
+          <img
+            src="./images/panel/panel22-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel23-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel24-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel25-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel26-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel27-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel28-min.jpg"
+            alt="" />
         </div>
         <div class="column grid gap-6">
-          <img src="./images/panel/panel29-min.jpg" alt="" />
-          <img src="./images/panel/panel30-min.jpg" alt="" />
-          <img src="./images/panel/panel31-min.jpg" alt="" />
-          <img src="./images/panel/panel32-min.jpg" alt="" />
-          <img src="./images/panel/panel33-min.jpg" alt="" />
-          <img src="./images/panel/panel34-min.jpg" alt="" />
-          <img src="./images/panel/panel35-min.jpg" alt="" />
+          <img
+            src="./images/panel/panel29-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel30-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel31-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel32-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel33-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel34-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel35-min.jpg"
+            alt="" />
         </div>
         <div class="column grid gap-6">
-          <img src="./images/panel/panel36-min.jpg" alt="" />
-          <img src="./images/panel/panel01-min.jpg" alt="" />
-          <img src="./images/panel/panel02-min.jpg" alt="" />
-          <img src="./images/panel/panel03-min.jpg" alt="" />
-          <img src="./images/panel/panel04-min.jpg" alt="" />
-          <img src="./images/panel/panel05-min.jpg" alt="" />
-          <img src="./images/panel/panel06-min.jpg" alt="" />
+          <img
+            src="./images/panel/panel36-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel01-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel02-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel03-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel04-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel05-min.jpg"
+            alt="" />
+          <img
+            src="./images/panel/panel06-min.jpg"
+            alt="" />
         </div>
       </div>
       <div
-        class="txtContent container absolute inset-0 max-h-max mx-auto my-auto w-full text-white text-4xl"
-      >
+        class="txtContent container max-[1000px]:relative absolute inset-0 max-h-max mx-auto my-auto w-full text-white text-4xl">
         <div class="flex flex-wrap gap-12 content-center">
           <p
-            class="verticalText max-w-max max-h-max text-2xl opacity-60 self-end"
-          >
+            class="verticalText verticalMobileReset max-w-max max-h-max text-2xl opacity-60 self-end">
             About Acube Industries
           </p>
           <div class="max-h-max">
@@ -164,20 +427,20 @@
         </div>
         <div class="flex gap-4 w-full mt-12 moreDiv">
           <div
-            class="line flex-1 h-[2px] my-auto rounded-full overflow-clip"
-          ></div>
+            class="line flex-1 h-[2px] my-auto rounded-full overflow-clip"></div>
           <span class="circleBefore text-2xl">More Detail</span>
         </div>
       </div>
     </section>
     <!-- services -->
     <section
-      class="services relative w-full z-10 min-h-[100vh] content-center bg-dark-white"
-    >
+      class="services relative w-full z-10 min-h-[100vh] content-center bg-dark-white">
       <div class="container mx-auto my-auto grid grid-cols-4">
         <div class="card relative">
           <div class="imgWrapper">
-            <img src="./images/industries-pics/Woodwork-&-JOINERY.png" alt="" />
+            <img
+              src="./images/industries-pics/Woodwork-&-JOINERY.png"
+              alt="" />
           </div>
           <div class="txtWrapper absolute inset-4 m-auto max-h-max text-center">
             <h2 class="text-2xl uppercase font-semibold tracking-wider title">
@@ -199,8 +462,7 @@
           <div class="imgWrapper">
             <img
               src="./images/industries-pics/Furniture_Manufacturing.png"
-              alt=""
-            />
+              alt="" />
           </div>
           <div class="txtWrapper absolute inset-4 m-auto max-h-max text-center">
             <h2 class="text-2xl uppercase font-semibold tracking-wider title">
@@ -220,7 +482,9 @@
         </div>
         <div class="card relative">
           <div class="imgWrapper">
-            <img src="./images/industries-pics/interior.png" alt="" />
+            <img
+              src="./images/industries-pics/interior.png"
+              alt="" />
           </div>
           <div class="txtWrapper absolute inset-4 m-auto max-h-max text-center">
             <h2 class="text-2xl uppercase font-semibold tracking-wider title">
@@ -240,7 +504,9 @@
         </div>
         <div class="card relative">
           <div class="imgWrapper">
-            <img src="./images/industries-pics/fit-out.png" alt="" />
+            <img
+              src="./images/industries-pics/fit-out.png"
+              alt="" />
           </div>
           <div class="txtWrapper absolute inset-4 m-auto max-h-max text-center">
             <h2 class="text-2xl uppercase font-semibold tracking-wider title">
@@ -270,23 +536,36 @@
         <div class="projectCard w-[70%] bg-red ml-20">
           <div class="leftContent">
             <div class="btnHolder flex gap-6">
-              <button class="projectSlideBtn" data-page="prev">
-                <svg width="24" height="24" style="scale: -1 1">
+              <button
+                class="projectSlideBtn"
+                data-page="prev">
+                <svg
+                  width="24"
+                  height="24"
+                  style="scale: -1 1">
                   <use href="#arrow-icon"></use>
                 </svg>
               </button>
-              <button class="projectSlideBtn" data-page="next">
-                <svg width="24" height="24">
+              <button
+                class="projectSlideBtn"
+                data-page="next">
+                <svg
+                  width="24"
+                  height="24">
                   <use href="#arrow-icon"></use>
                 </svg>
               </button>
             </div>
-            <div id="splideProjectsLeft" class="splide">
+            <div
+              id="splideProjectsLeft"
+              class="splide">
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
                     <div class="contentWrapper grid gap-12">
-                      <img src="./images/vega.png" alt="" />
+                      <img
+                        src="./images/vega.png"
+                        alt="" />
                       <p class="text-lg tracking-wider">
                         Vega incorporates carefully chosen elements to bring the
                         outdoors in, creating a rejuvenating living environment.
@@ -296,7 +575,9 @@
                   </li>
                   <li class="splide__slide">
                     <div class="contentWrapper grid gap-12">
-                      <img src="./images/electra.png" alt="" />
+                      <img
+                        src="./images/electra.png"
+                        alt="" />
                       <p class="text-lg tracking-wider">
                         This architectural masterpiece stands as a testament to
                         opulence, where every facet of its design and amenities
@@ -307,7 +588,9 @@
                   </li>
                   <li class="splide__slide">
                     <div class="contentWrapper grid gap-12">
-                      <img src="./images/adhara.png" alt="" />
+                      <img
+                        src="./images/adhara.png"
+                        alt="" />
                       <p class="text-lg tracking-wider">
                         A modern and extremely well-designed residential &
                         retail project named after a bright star called Adhara
@@ -321,12 +604,16 @@
             </div>
           </div>
           <div class="rightContent">
-            <div id="splideProjectsRight" class="splide">
+            <div
+              id="splideProjectsRight"
+              class="splide">
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
                     <div class="contentWrapper">
-                      <img src="./images/industries-pics/vega.png" alt="" />
+                      <img
+                        src="./images/industries-pics/vega.png"
+                        alt="" />
                       <p class="txt uppercase">
                         Interior / Exterior / Planning
                       </p>
@@ -334,7 +621,9 @@
                   </li>
                   <li class="splide__slide">
                     <div class="contentWrapper">
-                      <img src="./images/industries-pics/electra.png" alt="" />
+                      <img
+                        src="./images/industries-pics/electra.png"
+                        alt="" />
                       <p class="txt uppercase">
                         Interior / Exterior / Planning
                       </p>
@@ -342,7 +631,9 @@
                   </li>
                   <li class="splide__slide">
                     <div class="contentWrapper">
-                      <img src="./images/industries-pics/vega.png" alt="" />
+                      <img
+                        src="./images/industries-pics/vega.png"
+                        alt="" />
                       <p class="txt uppercase">
                         Interior / Exterior / Planning
                       </p>
@@ -380,10 +671,11 @@
           autoplay
           loop
           ></video> -->
-        <a href="#" class="contents">
+        <a
+          href="#"
+          class="contents">
           <div
-            class="YtVidWrapper aspect-video relative max-h-[700px] overflow-clip mx-auto"
-          >
+            class="YtVidWrapper aspect-video relative max-h-[700px] overflow-clip mx-auto">
             <iframe
               width="560"
               height="315"
@@ -394,16 +686,17 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               controls="0"
-              class="aspect-video object-cover w-full h-auto"
-            ></iframe>
+              class="aspect-video object-cover w-full h-auto"></iframe>
           </div>
         </a>
       </div>
     </section>
     <footer class="bg-white relative py-12">
       <div class="container mx-auto">
-        <div class="flex gap-24 items-end">
-          <img src="./images/Acube industries Gold.png" alt="" />
+        <div class="flex flex-wrap gap-24 items-end">
+          <img
+            src="./images/Acube industries Gold.png"
+            alt="" />
           <div class="col">
             <p><a href="#">+971 6 528 5120</a></p>
             <p><a href="#">info@acubeindustries.ae</a></p>
