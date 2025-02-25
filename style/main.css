@@ -26,8 +26,22 @@
   font-display: swap;
 }
 
-body {
+:root {
   font-family: 'Urbanist';
+  scrollbar-color: var(--color-yellow) var(--color-dark);
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  accent-color: var(--color-golden);
+  caret-color: var(--color-golden);
+}
+
+body {
+  background-color: var(--color-dark);
+}
+
+::selection {
+  background-color: var(--color-dark);
+  color: var(--color-golden);
 }
 
 .bannerVid {
@@ -441,15 +455,18 @@ a {
 }
 
 .menuOverlay .grid-item-left {
-  transform: translateY(100vh);
+  transform: translateY(150vh);
 }
 .menuOverlay .grid-item-right {
-  transform: translateY(-100vh);
+  transform: translateY(-150vh);
 }
 [data-menu='open'] .menuOverlay :is(.grid-item-left, .grid-item-right) {
   transform: translateY(0vh);
 }
-
 body[data-menu='open'] {
   overflow: hidden;
+}
+
+footer .col {
+  align-self: flex-start;
 }
