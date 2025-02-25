@@ -377,6 +377,7 @@
     --color-dark: #000;
     --color-golden: #d9c8a9;
     --color-yellow: #b7973e;
+    --section-gap: 2rem;
   }
 }
 @layer base {
@@ -614,9 +615,6 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
-  .ml-20 {
-    margin-left: calc(var(--spacing) * 20);
-  }
   .ml-auto {
     margin-left: auto;
   }
@@ -671,9 +669,6 @@
   .min-h-\[100vh\] {
     min-height: 100vh;
   }
-  .w-\[70\%\] {
-    width: 70%;
-  }
   .w-full {
     width: 100%;
   }
@@ -720,9 +715,6 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -843,13 +835,9 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
-  .text-8xl {
-    font-size: var(--text-8xl);
-    line-height: var(--tw-leading, var(--text-8xl--line-height));
-  }
-  .text-9xl {
-    font-size: var(--text-9xl);
-    line-height: var(--tw-leading, var(--text-9xl--line-height));
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -959,6 +947,21 @@
       display: none;
     }
   }
+  .max-\[1000px\]\:py-\(--section-gap\) {
+    @media (width < 1000px) {
+      padding-block: var(--section-gap);
+    }
+  }
+  .max-\[1000px\]\:pt-\(--section-gap\) {
+    @media (width < 1000px) {
+      padding-top: var(--section-gap);
+    }
+  }
+  .max-\[1000px\]\:pb-\(--section-gap\) {
+    @media (width < 1000px) {
+      padding-bottom: var(--section-gap);
+    }
+  }
   .min-\[1000px\]\:mb-\[350vh\] {
     @media (width >= 1000px) {
       margin-bottom: 350vh;
@@ -974,14 +977,51 @@
       display: flex;
     }
   }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .md\:text-8xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-8xl);
+      line-height: var(--tw-leading, var(--text-8xl--line-height));
+    }
+  }
+  .md\:text-9xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-9xl);
+      line-height: var(--tw-leading, var(--text-9xl--line-height));
+    }
+  }
   .lg\:grid-cols-5 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+  .xl\:ml-20 {
+    @media (width >= 80rem) {
+      margin-left: calc(var(--spacing) * 20);
+    }
+  }
+  .xl\:w-\[70\%\] {
+    @media (width >= 80rem) {
+      width: 70%;
+    }
+  }
+  .xl\:grid-cols-4 {
+    @media (width >= 80rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .xl\:gap-12 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 12);
     }
   }
 }
@@ -1152,11 +1192,24 @@ section.services .card:hover .descWrapper {
 section.services .card:hover {
   z-index: 1;
 }
-section.services .card:hover .imgWrapper, section.services .card:hover .imgWrapper:after, section.services .card:hover .imgWrapper img {
-  scale: 1.05;
-}
 section.services .card:hover .txtWrapper .title {
   color: var(--color-golden);
+}
+@media (max-width: 1000px) {
+  section.services .card .descWrapper {
+    grid-template-rows: 1fr;
+  }
+  section.services .card {
+    z-index: 1;
+  }
+  section.services .card .txtWrapper .title {
+    color: var(--color-golden);
+  }
+}
+@media (min-width: 1000px) {
+  section.services .card:hover .imgWrapper, section.services .card:hover .imgWrapper:after, section.services .card:hover .imgWrapper img {
+    scale: 1.05;
+  }
 }
 .projectSlideBtn {
   --gray: #c4c4c4;
@@ -1184,6 +1237,13 @@ section.services .card:hover .txtWrapper .title {
   grid-template-columns: 1fr 1fr;
   color: #989898;
 }
+@media (width < 80rem) {
+  .projectCard {
+    grid-template-columns: 1fr;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+  }
+}
 .container {
   padding-inline: calc(var(--spacing) * 4);
 }
@@ -1194,6 +1254,12 @@ section.services .card:hover .txtWrapper .title {
   display: grid;
   gap: 3rem;
   grid-auto-rows: max-content;
+}
+@media (width < 80rem) {
+  .projectCard .leftContent {
+    order: 1;
+    gap: 2rem;
+  }
 }
 .projectCard .readMoreBtn {
   background-color: transparent;
@@ -1213,6 +1279,14 @@ section.services .card:hover .txtWrapper .title {
   inset-inline-end: 0;
   inset-block-end: 1rem;
   max-width: 55%;
+}
+@media (width < 80rem) {
+  .projectCard .rightContent {
+    max-width: 100%;
+    inset-inline-end: initial;
+    inset-block-end: initial;
+    position: relative;
+  }
 }
 .projectCard .rightContent img {
   display: block;

@@ -233,7 +233,7 @@
 
     <!-- Banner -->
     <section
-      class="w-full min-h-[100vh] relative overflow-clip -mt-(--headerHeight) min-[1000px]:mb-[350vh] z-10">
+      class="w-full min-h-[100vh] relative overflow-clip -mt-(--headerHeight) min-[1000px]:mb-[350vh] z-10 max-[1000px]:pb-(--section-gap)">
       <div
         class="absolute inset-0 m-auto darkgradOverlay min-h-[100vh] overflow-clip">
         <iframe
@@ -254,7 +254,7 @@
               class="verticalText block max-w-max content-center text-2xl mb-4"
               >We</span
             >
-            <span class="text-9xl"> Define Standards. </span>
+            <span class="text-6xl md:text-9xl"> Define Standards. </span>
           </h1>
         </div>
       </div>
@@ -262,7 +262,7 @@
 
     <!-- About Section -->
     <section
-      class="max-[1000px]:static fixed inset-0 w-full overflow-clip bg-dark">
+      class="max-[1000px]:static fixed inset-0 w-full overflow-clip bg-dark max-[1000px]:py-(--section-gap)">
       <div
         class="parallexColumns max-[1000px]:hidden flex absolute gap-6 w-full place-content-end -rotate-15 translate-x-[5%] -translate-y-[10%]">
         <div class="column grid gap-6">
@@ -434,8 +434,9 @@
     </section>
     <!-- services -->
     <section
-      class="services relative w-full z-10 min-h-[100vh] content-center bg-dark-white">
-      <div class="container mx-auto my-auto grid grid-cols-4">
+      class="services relative w-full z-10 min-h-[100vh] content-center bg-dark-white max-[1000px]:py-(--section-gap)">
+      <div
+        class="container mx-auto my-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
         <div class="card relative">
           <div class="imgWrapper">
             <img
@@ -527,13 +528,14 @@
       </div>
     </section>
     <!-- projects Section -->
-    <section class="relative bg-white min-h-[100vh] z-10 content-center">
+    <section
+      class="relative bg-white min-h-[100vh] z-10 content-center max-[1000px]:pt-(--section-gap)">
       <div class="container mx-auto">
-        <h2 class="text-8xl mb-12">Projects</h2>
+        <h2 class="text-6xl md:text-8xl mb-12">Projects</h2>
       </div>
 
       <div class="container mx-auto">
-        <div class="projectCard w-[70%] bg-red ml-20">
+        <div class="projectCard w-full xl:w-[70%] bg-red xl:ml-20">
           <div class="leftContent">
             <div class="btnHolder flex gap-6">
               <button
@@ -562,7 +564,7 @@
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <div class="contentWrapper grid gap-12">
+                    <div class="contentWrapper grid gap-4 xl:gap-12">
                       <img
                         src="./images/vega.png"
                         alt="" />
@@ -574,7 +576,7 @@
                     </div>
                   </li>
                   <li class="splide__slide">
-                    <div class="contentWrapper grid gap-12">
+                    <div class="contentWrapper grid gap-4 xl:gap-12">
                       <img
                         src="./images/electra.png"
                         alt="" />
@@ -587,7 +589,7 @@
                     </div>
                   </li>
                   <li class="splide__slide">
-                    <div class="contentWrapper grid gap-12">
+                    <div class="contentWrapper grid gap-4 xl:gap-12">
                       <img
                         src="./images/adhara.png"
                         alt="" />
@@ -650,7 +652,7 @@
     <section class="relative w-full z-10 bg-dark pb-12">
       <div class="container mx-auto pt-32">
         <div class="txtWrapper text-white text-center leading-[1.2] font-light">
-          <h1 class="text-8xl">
+          <h1 class="text-6xl md:text-8xl">
             Sustainability at the <br />
             heart of our craft
           </h1>

@@ -7,6 +7,7 @@
   --color-dark: #000;
   --color-golden: #d9c8a9;
   --color-yellow: #b7973e;
+  --section-gap: 2rem;
 }
 
 @font-face {
@@ -210,14 +211,32 @@ section.services .card:hover .descWrapper {
 section.services .card:hover {
   z-index: 1;
 }
-section.services .card:hover .imgWrapper,
-section.services .card:hover .imgWrapper:after,
-section.services .card:hover .imgWrapper img {
-  scale: 1.05;
-}
+
 section.services .card:hover .txtWrapper .title {
   color: var(--color-golden);
 }
+
+@media (max-width: 1000px) {
+  section.services .card .descWrapper {
+    grid-template-rows: 1fr;
+  }
+  section.services .card {
+    z-index: 1;
+  }
+
+  section.services .card .txtWrapper .title {
+    color: var(--color-golden);
+  }
+}
+
+@media (min-width: 1000px) {
+  section.services .card:hover .imgWrapper,
+  section.services .card:hover .imgWrapper:after,
+  section.services .card:hover .imgWrapper img {
+    scale: 1.05;
+  }
+}
+
 .projectSlideBtn {
   --gray: #c4c4c4;
   color: var(--gray);
@@ -244,6 +263,13 @@ section.services .card:hover .txtWrapper .title {
   grid-template-columns: 1fr 1fr;
   color: #989898;
 }
+@media (width < 80rem) {
+  .projectCard {
+    grid-template-columns: 1fr;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+  }
+}
 .container {
   @apply px-4;
 }
@@ -256,7 +282,12 @@ section.services .card:hover .txtWrapper .title {
   gap: 3rem;
   grid-auto-rows: max-content;
 }
-
+@media (width < 80rem) {
+  .projectCard .leftContent {
+    order: 1;
+    gap: 2rem;
+  }
+}
 .projectCard .readMoreBtn {
   background-color: transparent;
   border: 1px solid #c4c4c4;
@@ -270,11 +301,20 @@ section.services .card:hover .txtWrapper .title {
   border-color: var(--color-golden);
   color: var(--color-golden);
 }
+
 .projectCard .rightContent {
   position: absolute;
   inset-inline-end: 0;
   inset-block-end: 1rem;
   max-width: 55%;
+}
+@media (width < 80rem) {
+  .projectCard .rightContent {
+    max-width: 100%;
+    inset-inline-end: initial;
+    inset-block-end: initial;
+    position: relative;
+  }
 }
 .projectCard .rightContent img {
   /* aspect-ratio: 900 / 607; */
