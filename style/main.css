@@ -208,6 +208,7 @@ section.services .card .descWrapper {
 section.services .card:hover .descWrapper {
   grid-template-rows: 1fr;
 }
+
 section.services .card:hover {
   z-index: 1;
 }
@@ -479,8 +480,11 @@ a {
   grid-template-rows: 0fr;
   transition: grid-template-rows 400ms ease-in-out;
 }
-.accordionGrid:hover .accordionContent {
-  grid-template-rows: 1fr;
+
+@media (max-width: 1000px) {
+  .accordionGrid .accordionContent {
+    grid-template-rows: 1fr;
+  }
 }
 
 .menuOverlay {

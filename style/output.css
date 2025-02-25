@@ -797,11 +797,11 @@
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
   .px-18 {
     padding-inline: calc(var(--spacing) * 18);
-  }
-  .px-24 {
-    padding-inline: calc(var(--spacing) * 24);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -814,6 +814,9 @@
   }
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
+  }
+  .pt-24 {
+    padding-top: calc(var(--spacing) * 24);
   }
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
@@ -993,6 +996,16 @@
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:px-24 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 24);
+    }
+  }
+  .md\:pt-32 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 32);
     }
   }
   .md\:text-8xl {
@@ -1414,8 +1427,10 @@ a {
   grid-template-rows: 0fr;
   transition: grid-template-rows 400ms ease-in-out;
 }
-.accordionGrid:hover .accordionContent {
-  grid-template-rows: 1fr;
+@media (max-width: 1000px) {
+  .accordionGrid .accordionContent {
+    grid-template-rows: 1fr;
+  }
 }
 .menuOverlay {
   pointer-events: none;
