@@ -53,6 +53,13 @@ body {
   background-color: var(--color-dark);
 }
 
+@media (min-width: 1000px) {
+  .bannerVid {
+    width: auto;
+    transform: translateX(-50%);
+  }
+}
+
 .bannerContent {
   z-index: 0;
   color: white;

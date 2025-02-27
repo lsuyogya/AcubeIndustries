@@ -980,11 +980,6 @@
       padding-inline: calc(var(--spacing) * 0) !important;
     }
   }
-  .max-\[80rem\]\:px-0 {
-    @media (width < 80rem) {
-      padding-inline: calc(var(--spacing) * 0);
-    }
-  }
   .min-\[1000px\]\:mb-\[350vh\] {
     @media (width >= 1000px) {
       margin-bottom: 350vh;
@@ -1103,6 +1098,12 @@ body {
   pointer-events: none;
   z-index: -1;
   background-color: var(--color-dark);
+}
+@media (min-width: 1000px) {
+  .bannerVid {
+    width: auto;
+    transform: translateX(-50%);
+  }
 }
 .bannerContent {
   z-index: 0;
