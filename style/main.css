@@ -53,7 +53,7 @@ body {
   background-color: var(--color-dark);
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
   .bannerVid {
     width: auto;
     transform: translateX(-50%);
