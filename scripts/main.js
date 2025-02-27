@@ -142,13 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   feather.replace();
 
-  // Menu Gap...not needed anymore
-  // const menuAnchors = document.querySelectorAll('.menuNav>a');
-  // menuAnchors.forEach((menuAnchor, index) => {
-  //   if (index % 2 != 0) index = index - 1;
-  //   menuAnchor.style.setProperty('--order', index);
-  // });
-
   //Menu
   const openBtn = document.querySelector('.hamburger');
   const closeBtn = document.querySelector('.menuOverlay .close');
