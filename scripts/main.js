@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
-  const header = document.querySelector('header');
+  const header = document.querySelector('#topHeader');
   function bodyStyles() {
     body.style.setProperty('--headerHeight', header.offsetHeight + 'px');
     body.style.setProperty('--vh', window.innerHeight + 'px');
