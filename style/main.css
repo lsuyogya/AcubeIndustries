@@ -490,9 +490,12 @@ a {
   transition: grid-template-rows 400ms ease-in-out;
 }
 
+.accordionGrid:hover .accordionContent {
+  grid-template-rows: 1fr;
+}
 @media (max-width: 1000px) {
-  .accordionGrid .accordionContent {
-    grid-template-rows: 1fr;
+  .accordionGrid > a {
+    pointer-events: none;
   }
 }
 
