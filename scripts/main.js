@@ -37,8 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const vhPx = 959;
     const startPointVh = startPointPx / vhPx;
     const endPointVh = endPointPx / vhPx;
-
-    const trueStartPointPx = window.innerHeight * startPointVh;
+    let trueStartPointPx = 0;
+    // debugger;
+    if (window.innerWidth < 1000) {
+      trueStartPointPx = window.innerHeight * 0.6;
+    } else {
+      trueStartPointPx = window.innerHeight * startPointVh;
+    }
     function reveal() {
       spans.forEach((span) => {
         let { top, left } = span.getBoundingClientRect();
@@ -93,8 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateOpacity);
     window.addEventListener('resize', updateOpacity); // Handle screen resize
     window.addEventListener('resize', bodyStyles); // Handle screen resize
-    updateOpacity(); // Initialize on page load
-    txtOpacity();
     const parallexColumns = document.querySelectorAll(
       '.parallexColumns .column'
     );
@@ -102,7 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const multiplier = (Math.pow(index, 1.5) + 1) / 20;
       column.style.setProperty('--multiplier', multiplier); //css will use this to translate, at different speeds
     });
+    updateOpacity(); // Initialize on page load
   }
+  txtOpacity();
   bodyStyles(); // Initialize on page load
 
   var splideProjectsLeft = new Splide('#splideProjectsLeft', {

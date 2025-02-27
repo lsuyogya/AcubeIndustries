@@ -269,6 +269,7 @@ section.services .card:hover .txtWrapper .title {
     grid-template-columns: 1fr;
     padding-inline: 2rem;
     padding-block: 2rem;
+    word-break: break-word;
   }
 }
 .container {
@@ -287,6 +288,7 @@ section.services .card:hover .txtWrapper .title {
   .projectCard .leftContent {
     order: 1;
     gap: 2rem;
+    word-break: break-word;
   }
 }
 .projectCard .readMoreBtn {

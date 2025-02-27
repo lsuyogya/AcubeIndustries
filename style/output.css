@@ -815,6 +815,9 @@
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
   }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
   .pt-24 {
     padding-top: calc(var(--spacing) * 24);
   }
@@ -848,6 +851,10 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -968,6 +975,16 @@
       padding-bottom: var(--section-gap);
     }
   }
+  .max-\[80rem\]\:\!px-0 {
+    @media (width < 80rem) {
+      padding-inline: calc(var(--spacing) * 0) !important;
+    }
+  }
+  .max-\[80rem\]\:px-0 {
+    @media (width < 80rem) {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
   .min-\[1000px\]\:mb-\[350vh\] {
     @media (width >= 1000px) {
       margin-bottom: 350vh;
@@ -986,6 +1003,11 @@
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
+    }
+  }
+  .md\:min-h-\[100vh\] {
+    @media (width >= 48rem) {
+      min-height: 100vh;
     }
   }
   .md\:grid-cols-2 {
@@ -1263,6 +1285,7 @@ section.services .card:hover .txtWrapper .title {
     grid-template-columns: 1fr;
     padding-inline: 2rem;
     padding-block: 2rem;
+    word-break: break-word;
   }
 }
 .container {
@@ -1280,6 +1303,7 @@ section.services .card:hover .txtWrapper .title {
   .projectCard .leftContent {
     order: 1;
     gap: 2rem;
+    word-break: break-word;
   }
 }
 .projectCard .readMoreBtn {
