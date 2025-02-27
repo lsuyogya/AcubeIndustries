@@ -53,8 +53,12 @@ body {
   background-color: var(--color-dark);
 }
 
+img.bannerVid {
+  object-fit: cover;
+}
+
 @media (max-width: 1000px) {
-  .bannerVid {
+  .bannerVid:has(video) {
     width: auto;
     transform: translateX(-50%);
   }
@@ -80,6 +84,29 @@ body {
     rgba(0, 0, 0, 0.2) 100%
   );
 }
+.darkgradOverlay:has(video):after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.3) 10%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0.2) 75%,
+    rgba(0, 0, 0, 0.3) 90%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.darkgradOverlay:has(img):after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0.7) 25%,
+    rgba(0, 0, 0, 0.7) 75%,
+    rgba(0, 0, 0, 0.7) 90%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
 
 .parallexColumns {
   --startPoint: calc(100vh);
@@ -98,6 +125,7 @@ body {
   transform: translateY(
     calc((var(--startPoint) - var(--scrollY)) * var(--multiplier))
   );
+  transition: transform 300ms ease;
 }
 
 .verticalText {

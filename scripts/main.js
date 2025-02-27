@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rootElement = document.querySelector(
       '.parallexColumns + .txtContent div:has(> p:first-child):has(> p:last-child)'
     );
+    if (!rootElement) return;
     const paras = rootElement.querySelectorAll('p');
 
     paras.forEach((para) => {
@@ -84,7 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const opacity = maxOpacity * (1 - Math.abs(2 * progress - 1));
 
     // Update opacity directly
-    document.querySelector('.parallexColumns').style.opacity = opacity;
+    const parallexColumns = document.querySelector('.parallexColumns');
+    if (!parallexColumns) {
+      return;
+    }
+    parallexColumns.style.opacity = opacity;
 
     // Apply additional logic for `.txtContent`
     const txtContentOpacity = Math.max(
@@ -105,7 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const multiplier = (Math.pow(index, 1.5) + 1) / 20;
       column.style.setProperty('--multiplier', multiplier); //css will use this to translate, at different speeds
     });
-    updateOpacity(); // Initialize on page load
+    if (parallexColumns) {
+      updateOpacity(); // Initialize on page load
+    }
   }
   txtOpacity();
   bodyStyles(); // Initialize on page load
