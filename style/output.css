@@ -696,6 +696,9 @@
   .table {
     display: table;
   }
+  .aspect-\[0\.8\] {
+    aspect-ratio: 0.8;
+  }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
@@ -836,6 +839,9 @@
   }
   .place-content-end {
     place-content: end;
+  }
+  .place-content-start {
+    place-content: start;
   }
   .content-between {
     align-content: space-between;

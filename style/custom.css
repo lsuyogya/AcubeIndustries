@@ -581,3 +581,7 @@ footer .col {
 .formHolder .inputGroup:focus-within:after {
   scale: 1;
 }
+
+.dashList li:before {
+  content: '- ';
+}
