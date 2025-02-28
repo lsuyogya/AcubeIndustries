@@ -12,6 +12,9 @@
     <link
       rel="stylesheet"
       href="./style/output.css" />
+    <link
+      rel="stylesheet"
+      href="./style/custom.css" />
     <script
       defer
       src="./scripts/splide.min.js"></script>
@@ -52,23 +55,23 @@
     <header>
       <div
         id="topHeader"
-        class="w-full z-20 relative py-4">
+        class="relative z-20 w-full py-4">
         <div class="container mx-auto">
           <div class="flex justify-between">
             <img
               src="./images/WHITE ACUBE INDUSTRIES.png"
               alt="" />
-            <div class="flex flex-wrap align-middle gap-12">
+            <div class="flex flex-wrap gap-12 align-middle">
               <a
                 href="#"
                 class="contents">
                 <button
-                  class="hidden md:block bg-white rounded-full px-4 py-2 max-h-max my-auto transition hover:text-golden">
+                  class="hidden px-4 py-2 my-auto transition bg-white rounded-full cursor-pointer hover:bg-yellow text-yellow md:block max-h-max hover:text-black">
                   Contact Us
                 </button>
               </a>
               <div
-                class="hamburger cursor-pointer my-auto text-white uppercase tracking-wide">
+                class="my-auto tracking-wide text-white uppercase cursor-pointer hamburger">
                 <div class="line h-[1px] w-full bg-white my-1"></div>
                 <div class="line h-[1px] w-full bg-white my-1"></div>
                 <div class="line h-[1px] w-full bg-white my-1"></div>
@@ -80,26 +83,26 @@
       </div>
 
       <div
-        class="menuOverlay bg-transparent fixed h-screen w-screen z-20 top-0">
-        <div class="grid grid-cols-2 h-full w-full">
+        class="fixed top-0 z-20 w-screen h-screen bg-transparent menuOverlay">
+        <div class="grid w-full h-full grid-cols-2">
           <a
             href="#"
             class="contents">
             <div
-              class="grid-item-left py-12 px-18 bg-black hidden md:flex flex-wrap relative moreDiv cursor-pointer">
-              <div class="imgWrapper absolute inset-0">
+              class="relative flex-wrap hidden py-12 bg-black cursor-pointer grid-item-left px-18 md:flex moreDiv">
+              <div class="absolute inset-0 imgWrapper">
                 <img
                   src="./images/industries-pics/adhara.png"
                   alt=""
-                  class="menuImg object-cover h-full w-full" />
+                  class="object-cover w-full h-full menuImg" />
               </div>
               <div
-                class="self-end z-1 text-xl relative mt-auto text-white flex w-full max-h-max">
+                class="relative flex self-end w-full mt-auto text-xl text-white z-1 max-h-max">
                 <div
-                  class="flex flex-wrap justify-between gap-x-4 gap-y-2 w-full grow container-half ml-auto font-light">
-                  <span class="uppercase content-center">Vega</span>
+                  class="flex flex-wrap justify-between w-full ml-auto font-light gap-x-4 gap-y-2 grow container-half">
+                  <span class="content-center uppercase">Vega</span>
                   <span
-                    class="uppercase flex flex-wrap content-center items-center"
+                    class="flex flex-wrap items-center content-center uppercase"
                     >View Project
                     <svg
                       width="32px"
@@ -114,18 +117,18 @@
             </div>
           </a>
 
-          <div class="bg-yellow grid-item-right col-span-2 md:col-span-1">
+          <div class="col-span-2 bg-yellow grid-item-right md:col-span-1">
             <div
-              class="px-8 md:px-24 py-15 pt-24 md:pt-32 grid grid-auto-row-max content-between relative h-full container-half mr-auto">
-              <nav class="menuNav text-white grid gap-6 text-4xl font-light">
+              class="relative grid content-between h-full px-8 pt-24 mr-auto md:px-24 py-15 md:pt-32 grid-auto-row-max container-half">
+              <nav class="grid gap-6 text-4xl font-light text-white menuNav">
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >Home</a
                 >
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >About Us</a
                 >
 
@@ -138,54 +141,54 @@
                   <div class="accordionContent">
                     <div class="overflow-hidden">
                       <ul class="py-2 pl-8 text-xl">
-                        <li class="flex gap-4 content-center items-center">
+                        <li class="flex items-center content-center gap-4">
                           <a
                             href="#"
-                            class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                            class="text-2xl text-black transition-colors ease-in-out hover:text-white duration-400"
                             >Service 1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.2</a
                           >
                         </li>
-                        <li class="flex gap-4 content-center items-center">
+                        <li class="flex items-center content-center gap-4">
                           <a
                             href="#"
-                            class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                            class="text-2xl text-black transition-colors ease-in-out hover:text-white duration-400"
                             >Service 1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.2</a
                           >
                         </li>
-                        <li class="flex gap-4 content-center items-center">
+                        <li class="flex items-center content-center gap-4">
                           <a
                             href="#"
-                            class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                            class="text-2xl text-black transition-colors ease-in-out hover:text-white duration-400"
                             >Service 1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.2</a
                           >
                         </li>
@@ -196,23 +199,23 @@
 
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >Projects</a
                 >
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >Media</a
                 >
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >Contacts
                 </a>
               </nav>
               <div class="close"></div>
               <div
-                class="self-end z-1 text-xl relative mt-auto text-white flex flex-wrap gap-x-12 gap-y-4 w-full max-h-max">
+                class="relative flex flex-wrap self-end w-full mt-auto text-xl text-white z-1 gap-x-12 gap-y-4 max-h-max">
                 <span>
                   T:
                   <a
@@ -250,13 +253,13 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
-          class="w-full h-auto aspect-video object-center bannerVid"></iframe>
+          class="object-center w-full h-auto aspect-video bannerVid"></iframe>
       </div>
-      <div class="container mx-auto absolute inset-x-0 bottom-6">
+      <div class="container absolute inset-x-0 mx-auto bottom-6">
         <div class="bannerContent">
           <h1 class="flex">
             <span
-              class="verticalText block max-w-max content-center text-2xl mb-4"
+              class="content-center block mb-4 text-2xl verticalText max-w-max"
               >We</span
             >
             <span class="text-6xl md:text-9xl"> Define Standards. </span>
@@ -270,7 +273,7 @@
       class="max-[1000px]:static fixed inset-0 w-full overflow-clip bg-dark max-[1000px]:py-(--section-gap)">
       <div
         class="parallexColumns max-[1000px]:hidden flex absolute gap-6 w-full place-content-end -rotate-15 translate-x-[5%] -translate-y-[10%]">
-        <div class="column grid gap-6">
+        <div class="grid gap-6 column">
           <img
             src="./images/panel/panel01-min.jpg"
             alt="" />
@@ -293,7 +296,7 @@
             src="./images/panel/panel07-min.jpg"
             alt="" />
         </div>
-        <div class="column grid gap-6">
+        <div class="grid gap-6 column">
           <img
             src="./images/panel/panel08-min.jpg"
             alt="" />
@@ -316,7 +319,7 @@
             src="./images/panel/panel14-min.jpg"
             alt="" />
         </div>
-        <div class="column grid gap-6">
+        <div class="grid gap-6 column">
           <img
             src="./images/panel/panel15-min.jpg"
             alt="" />
@@ -339,7 +342,7 @@
             src="./images/panel/panel21-min.jpg"
             alt="" />
         </div>
-        <div class="column grid gap-6">
+        <div class="grid gap-6 column">
           <img
             src="./images/panel/panel22-min.jpg"
             alt="" />
@@ -362,7 +365,7 @@
             src="./images/panel/panel28-min.jpg"
             alt="" />
         </div>
-        <div class="column grid gap-6">
+        <div class="grid gap-6 column">
           <img
             src="./images/panel/panel29-min.jpg"
             alt="" />
@@ -385,7 +388,7 @@
             src="./images/panel/panel35-min.jpg"
             alt="" />
         </div>
-        <div class="column grid gap-6">
+        <div class="grid gap-6 column">
           <img
             src="./images/panel/panel36-min.jpg"
             alt="" />
@@ -411,9 +414,9 @@
       </div>
       <div
         class="txtContent container max-[1000px]:relative absolute inset-0 max-h-max mx-auto my-auto w-full text-white text-4xl">
-        <div class="flex flex-wrap gap-12 content-center">
+        <div class="flex flex-wrap content-center gap-12">
           <p
-            class="verticalText verticalMobileReset max-w-max max-h-max text-2xl opacity-60 self-end">
+            class="self-end text-2xl verticalText verticalMobileReset max-w-max max-h-max opacity-60">
             About Acube Industries
           </p>
           <div class="max-h-max">
@@ -430,10 +433,10 @@
             <p class="mt-12 max-w-[50ch]">Team of 250+ skilled workforce</p>
           </div>
         </div>
-        <div class="flex gap-4 w-full mt-12 moreDiv">
+        <div class="flex w-full gap-4 mt-12 moreDiv">
           <div
             class="line flex-1 h-[2px] my-auto rounded-full overflow-clip"></div>
-          <span class="circleBefore text-2xl">More Detail</span>
+          <span class="text-2xl circleBefore">More Detail</span>
         </div>
       </div>
     </section>
@@ -441,20 +444,20 @@
     <section
       class="services relative w-full z-10 min-h-[100dvh] content-center bg-dark-white max-[1000px]:py-(--section-gap)">
       <div
-        class="container mx-auto my-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-        <div class="card relative">
+        class="container grid grid-cols-1 mx-auto my-auto md:grid-cols-2 xl:grid-cols-4">
+        <div class="relative card">
           <div class="imgWrapper">
             <img
               src="./images/industries-pics/Woodwork-&-JOINERY.png"
               alt="" />
           </div>
-          <div class="txtWrapper absolute inset-4 m-auto max-h-max text-center">
-            <h2 class="text-2xl uppercase font-semibold tracking-wider title">
+          <div class="absolute m-auto text-center txtWrapper inset-4 max-h-max">
+            <h2 class="text-2xl font-semibold tracking-wider uppercase title">
               Woodwork & Joinery
             </h2>
             <div class="grid descWrapper">
               <div class="overflow-hidden">
-                <p class="line-clamp-6 mt-6">
+                <p class="mt-6 line-clamp-6">
                   Our team boasts an exceptional eye for detail to transform
                   your spaces into distinctive, future-focused spaces, ideal for
                   retail, commercial, residential, entertainment, and
@@ -464,19 +467,19 @@
             </div>
           </div>
         </div>
-        <div class="card relative">
+        <div class="relative card">
           <div class="imgWrapper">
             <img
               src="./images/industries-pics/Furniture_Manufacturing.png"
               alt="" />
           </div>
-          <div class="txtWrapper absolute inset-4 m-auto max-h-max text-center">
-            <h2 class="text-2xl uppercase font-semibold tracking-wider title">
+          <div class="absolute m-auto text-center txtWrapper inset-4 max-h-max">
+            <h2 class="text-2xl font-semibold tracking-wider uppercase title">
               Furniture Manufacturing
             </h2>
             <div class="grid descWrapper">
               <div class="overflow-hidden">
-                <p class="line-clamp-6 mt-6">
+                <p class="mt-6 line-clamp-6">
                   Our team boasts an exceptional eye for detail to transform
                   your spaces into distinctive, future-focused spaces, ideal for
                   retail, commercial, residential, entertainment, and
@@ -486,19 +489,19 @@
             </div>
           </div>
         </div>
-        <div class="card relative">
+        <div class="relative card">
           <div class="imgWrapper">
             <img
               src="./images/industries-pics/interior.png"
               alt="" />
           </div>
-          <div class="txtWrapper absolute inset-4 m-auto max-h-max text-center">
-            <h2 class="text-2xl uppercase font-semibold tracking-wider title">
+          <div class="absolute m-auto text-center txtWrapper inset-4 max-h-max">
+            <h2 class="text-2xl font-semibold tracking-wider uppercase title">
               Interior Design
             </h2>
             <div class="grid descWrapper">
               <div class="overflow-hidden">
-                <p class="line-clamp-6 mt-6">
+                <p class="mt-6 line-clamp-6">
                   Our team boasts an exceptional eye for detail to transform
                   your spaces into distinctive, future-focused spaces, ideal for
                   retail, commercial, residential, entertainment, and
@@ -508,19 +511,19 @@
             </div>
           </div>
         </div>
-        <div class="card relative">
+        <div class="relative card">
           <div class="imgWrapper">
             <img
               src="./images/industries-pics/fit-out.png"
               alt="" />
           </div>
-          <div class="txtWrapper absolute inset-4 m-auto max-h-max text-center">
-            <h2 class="text-2xl uppercase font-semibold tracking-wider title">
+          <div class="absolute m-auto text-center txtWrapper inset-4 max-h-max">
+            <h2 class="text-2xl font-semibold tracking-wider uppercase title">
               Fit-out
             </h2>
             <div class="grid descWrapper">
               <div class="overflow-hidden">
-                <p class="line-clamp-6 mt-6">
+                <p class="mt-6 line-clamp-6">
                   Our team boasts an exceptional eye for detail to transform
                   your spaces into distinctive, future-focused spaces, ideal for
                   retail, commercial, residential, entertainment, and
@@ -536,13 +539,13 @@
     <section
       class="relative bg-white md:min-h-[100dvh] z-10 content-center max-[1000px]:pt-(--section-gap)">
       <div class="container mx-auto">
-        <h2 class="text-4xl md:text-8xl mb-12">Projects</h2>
+        <h2 class="mb-12 text-4xl md:text-8xl">Projects</h2>
       </div>
 
       <div class="container max-[80rem]:!px-0 mx-auto">
         <div class="projectCard w-full xl:w-[70%] bg-red xl:ml-20">
           <div class="leftContent">
-            <div class="btnHolder flex gap-6">
+            <div class="flex gap-6 btnHolder">
               <button
                 class="projectSlideBtn"
                 data-page="prev">
@@ -569,7 +572,7 @@
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <div class="contentWrapper grid gap-4 xl:gap-12">
+                    <div class="grid gap-4 contentWrapper xl:gap-12">
                       <img
                         src="./images/vega.png"
                         alt="" />
@@ -581,7 +584,7 @@
                     </div>
                   </li>
                   <li class="splide__slide">
-                    <div class="contentWrapper grid gap-4 xl:gap-12">
+                    <div class="grid gap-4 contentWrapper xl:gap-12">
                       <img
                         src="./images/electra.png"
                         alt="" />
@@ -594,7 +597,7 @@
                     </div>
                   </li>
                   <li class="splide__slide">
-                    <div class="contentWrapper grid gap-4 xl:gap-12">
+                    <div class="grid gap-4 contentWrapper xl:gap-12">
                       <img
                         src="./images/adhara.png"
                         alt="" />
@@ -621,7 +624,7 @@
                       <img
                         src="./images/industries-pics/vega.png"
                         alt="" />
-                      <p class="txt uppercase">
+                      <p class="uppercase txt">
                         Interior / Exterior / Planning
                       </p>
                     </div>
@@ -631,7 +634,7 @@
                       <img
                         src="./images/industries-pics/electra.png"
                         alt="" />
-                      <p class="txt uppercase">
+                      <p class="uppercase txt">
                         Interior / Exterior / Planning
                       </p>
                     </div>
@@ -641,7 +644,7 @@
                       <img
                         src="./images/industries-pics/vega.png"
                         alt="" />
-                      <p class="txt uppercase">
+                      <p class="uppercase txt">
                         Interior / Exterior / Planning
                       </p>
                     </div>
@@ -654,8 +657,8 @@
       </div>
     </section>
 
-    <section class="relative w-full z-10 bg-dark pb-12">
-      <div class="container mx-auto pt-32">
+    <section class="relative z-10 w-full pb-12 bg-dark">
+      <div class="container pt-32 mx-auto">
         <div class="txtWrapper text-white text-center leading-[1.2] font-light">
           <h1 class="text-4xl md:text-8xl">
             Sustainability at the <br />
@@ -674,7 +677,7 @@
       <div class="container mx-auto">
         <!-- <video
           src="./videos/vid1.mp4"
-          class="aspect-video object-cover w-full h-max"
+          class="object-cover w-full aspect-video h-max"
           autoplay
           loop
           ></video> -->
@@ -693,20 +696,20 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               controls="0"
-              class="aspect-video object-cover w-full h-auto"></iframe>
+              class="object-cover w-full h-auto aspect-video"></iframe>
           </div>
         </a>
       </div>
     </section>
-    <footer class="bg-white relative">
-      <div class="container mx-auto pt-12">
+    <footer class="relative bg-white">
+      <div class="container pt-12 mx-auto">
         <img
           src="./images/Acube industries Gold.png"
           alt="" />
       </div>
-      <div class="container mx-auto py-6">
+      <div class="container py-6 mx-auto">
         <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 md:gap-x-24 gap-y-4 items-end">
+          class="grid items-end grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 md:gap-x-24 gap-y-4">
           <div class="col col-span-full md:col-span-1">
             <p>
               Unit R04-01, Level P2, The Onyx Tower 1, Sheik Zayed Road, Dubai,
@@ -753,7 +756,7 @@
         </div>
       </div>
       <div class="w-full bg-black">
-        <div class="container mx-auto text-white py-2 text-sm">
+        <div class="container py-2 mx-auto text-sm text-white">
           Copyright © 2025 Acube Industries All rights reserved.
         </div>
       </div>

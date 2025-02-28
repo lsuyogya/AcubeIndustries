@@ -12,6 +12,9 @@
     <link
       rel="stylesheet"
       href="./style/output.css" />
+    <link
+      rel="stylesheet"
+      href="./style/custom.css" />
     <script
       defer
       src="./scripts/splide.min.js"></script>
@@ -21,6 +24,9 @@
     <script
       defer
       src="./scripts/main.js"></script>
+    <script
+      defer
+      src="./scripts/about.js"></script>
   </head>
   <body>
     <svg
@@ -52,23 +58,23 @@
     <header>
       <div
         id="topHeader"
-        class="w-full z-20 relative py-4">
+        class="relative z-20 w-full py-4">
         <div class="container mx-auto">
           <div class="flex justify-between">
             <img
               src="./images/WHITE ACUBE INDUSTRIES.png"
               alt="" />
-            <div class="flex flex-wrap align-middle gap-12">
+            <div class="flex flex-wrap gap-12 align-middle">
               <a
                 href="#"
                 class="contents">
                 <button
-                  class="hidden md:block bg-white rounded-full px-4 py-2 max-h-max my-auto transition hover:text-golden">
+                  class="hidden px-4 py-2 my-auto transition bg-white rounded-full cursor-pointer hover:bg-yellow text-yellow md:block max-h-max hover:text-black">
                   Contact Us
                 </button>
               </a>
               <div
-                class="hamburger cursor-pointer my-auto text-white uppercase tracking-wide">
+                class="my-auto tracking-wide text-white uppercase cursor-pointer hamburger">
                 <div class="line h-[1px] w-full bg-white my-1"></div>
                 <div class="line h-[1px] w-full bg-white my-1"></div>
                 <div class="line h-[1px] w-full bg-white my-1"></div>
@@ -80,26 +86,26 @@
       </div>
 
       <div
-        class="menuOverlay bg-transparent fixed h-screen w-screen z-20 top-0">
-        <div class="grid grid-cols-2 h-full w-full">
+        class="fixed top-0 z-20 w-screen h-screen bg-transparent menuOverlay">
+        <div class="grid w-full h-full grid-cols-2">
           <a
             href="#"
             class="contents">
             <div
-              class="grid-item-left py-12 px-18 bg-black hidden md:flex flex-wrap relative moreDiv cursor-pointer">
-              <div class="imgWrapper absolute inset-0">
+              class="relative flex-wrap hidden py-12 bg-black cursor-pointer grid-item-left px-18 md:flex moreDiv">
+              <div class="absolute inset-0 imgWrapper">
                 <img
                   src="./images/industries-pics/adhara.png"
                   alt=""
-                  class="menuImg object-cover h-full w-full" />
+                  class="object-cover w-full h-full menuImg" />
               </div>
               <div
-                class="self-end z-1 text-xl relative mt-auto text-white flex w-full max-h-max">
+                class="relative flex self-end w-full mt-auto text-xl text-white z-1 max-h-max">
                 <div
-                  class="flex flex-wrap justify-between gap-x-4 gap-y-2 w-full grow container-half ml-auto font-light">
-                  <span class="uppercase content-center">Vega</span>
+                  class="flex flex-wrap justify-between w-full ml-auto font-light gap-x-4 gap-y-2 grow container-half">
+                  <span class="content-center uppercase">Vega</span>
                   <span
-                    class="uppercase flex flex-wrap content-center items-center"
+                    class="flex flex-wrap items-center content-center uppercase"
                     >View Project
                     <svg
                       width="32px"
@@ -114,18 +120,18 @@
             </div>
           </a>
 
-          <div class="bg-yellow grid-item-right col-span-2 md:col-span-1">
+          <div class="col-span-2 bg-yellow grid-item-right md:col-span-1">
             <div
-              class="px-8 md:px-24 py-15 pt-24 md:pt-32 grid grid-auto-row-max content-between relative h-full container-half mr-auto">
-              <nav class="menuNav text-white grid gap-6 text-4xl font-light">
+              class="relative grid content-between h-full px-8 pt-24 mr-auto md:px-24 py-15 md:pt-32 grid-auto-row-max container-half">
+              <nav class="grid gap-6 text-4xl font-light text-white menuNav">
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >Home</a
                 >
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >About Us</a
                 >
 
@@ -138,54 +144,54 @@
                   <div class="accordionContent">
                     <div class="overflow-hidden">
                       <ul class="py-2 pl-8 text-xl">
-                        <li class="flex gap-4 content-center items-center">
+                        <li class="flex items-center content-center gap-4">
                           <a
                             href="#"
-                            class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                            class="text-2xl text-black transition-colors ease-in-out hover:text-white duration-400"
                             >Service 1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.2</a
                           >
                         </li>
-                        <li class="flex gap-4 content-center items-center">
+                        <li class="flex items-center content-center gap-4">
                           <a
                             href="#"
-                            class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                            class="text-2xl text-black transition-colors ease-in-out hover:text-white duration-400"
                             >Service 1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.2</a
                           >
                         </li>
-                        <li class="flex gap-4 content-center items-center">
+                        <li class="flex items-center content-center gap-4">
                           <a
                             href="#"
-                            class="text-black text-2xl hover:text-white transition-colors duration-400 ease-in-out"
+                            class="text-2xl text-black transition-colors ease-in-out hover:text-white duration-400"
                             >Service 1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.1</a
                           >
                           <a
                             href="#"
-                            class="text-lg transition-colors duration-400 ease-in-out"
+                            class="text-lg transition-colors ease-in-out duration-400"
                             >Service 1.2</a
                           >
                         </li>
@@ -196,23 +202,23 @@
 
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >Projects</a
                 >
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >Media</a
                 >
                 <a
                   href="#"
-                  class="uppercase block"
+                  class="block uppercase"
                   >Contacts
                 </a>
               </nav>
               <div class="close"></div>
               <div
-                class="self-end z-1 text-xl relative mt-auto text-white flex flex-wrap gap-x-12 gap-y-4 w-full max-h-max">
+                class="relative flex flex-wrap self-end w-full mt-auto text-xl text-white z-1 gap-x-12 gap-y-4 max-h-max">
                 <span>
                   T:
                   <a
@@ -243,14 +249,14 @@
         class="absolute inset-0 m-auto darkgradOverlay min-h-[100dvh] overflow-clip">
         <img
           src="./images/about/top-banner.jpg"
-          class="w-full h-auto aspect-video object-center bannerVid" />
+          class="object-center w-full h-auto aspect-video bannerVid" />
       </div>
-      <div class="container m-auto absolute inset-0 grid place-content-center">
+      <div class="container absolute inset-0 grid m-auto place-content-center">
         <div class="bannerContent">
           <h1
             class="grid text-center place-content-center max-w-[19ch] font-light text-5xl md:text-6xl">
             <span
-              class="block max-w-max content-center text-4xl mb-2 uppercase text-yellow mx-auto"
+              class="content-center block mx-auto mb-2 text-4xl uppercase max-w-max text-yellow"
               >About</span
             >
             <span
@@ -261,8 +267,8 @@
         </div>
         <div
           class="grid grid-cols-2 absolute inset-x-0 bottom-0 min-h-[calc(var(--section-gap)*3)]">
-          <div class="bg-transparent h-full w-full"></div>
-          <div class="bg-transparent md:bg-white h-full w-full"></div>
+          <div class="w-full h-full bg-transparent"></div>
+          <div class="w-full h-full bg-transparent md:bg-white"></div>
         </div>
       </div>
     </section>
@@ -271,14 +277,14 @@
     <section class="w-full bg-white min-h-dvh">
       <div class="container mx-auto">
         <div class="grid md:grid-cols-2">
-          <div class="imgWrapper w-full h-full">
+          <div class="w-full h-full imgWrapper">
             <img
               src="./images/about/Who-we-are.jpg"
-              class="object-cover h-full w-full max-h-dvh" />
+              class="object-cover w-full h-full max-h-dvh" />
           </div>
-          <div class="txtWrapper py-4 md:p-8 lg:p-24 text-lg">
-            <h1 class="uppercase text-yellow text-xl">Who we Are</h1>
-            <h2 class="text-3xl md:text-5xl font-thin mt-4 mb-12">
+          <div class="py-4 text-lg txtWrapper md:p-8 lg:p-24">
+            <h1 class="text-xl uppercase text-yellow">Who we Are</h1>
+            <h2 class="mt-4 mb-12 text-3xl font-thin md:text-5xl">
               Specialize in crafting <br class="hidden md:block" />
               custom, high-end solutions
             </h2>
@@ -310,203 +316,209 @@
     <section
       class="coreValues relative w-full z-10 min-h-[100dvh] content-center bg-dark max-[1000px]:py-(--section-gap)">
       <div
-        class="container mx-auto my-auto h-full grid grid-rows-[auto_1fr_auto] min-h-[100dvh]">
-        <div class="grid grid-cols-2 w-full h-[calc(var(--section-gap)*3)]">
-          <div class="bg-transparent h-full w-full"></div>
-          <div class="bg-transparent h-full w-full"></div>
-        </div>
-        <div class="content grow h-full w-full bg-red-500">
-          <h1 class="uppercase text-yellow text-xl">Core Values</h1>
-          <h2 class="text-3xl md:text-5xl font-thin my-4">Committed</h2>
-          <p class="max-w-[63ch]">
-            Acube Industries is a leading force in the UAE’s furniture and
-            joinery industry, renowned for its dedication to precision,
-            durability, and uncompromising quality. We specialize in crafting
-            custom, high-end solutions that blend timeless elegance with modern
-            functionality
-          </p>
-        </div>
-        <div class="grid grid-cols-2 w-full h-[calc(var(--section-gap)*3)]">
-          <div class="bg-transparent h-full w-full"></div>
-          <div class="bg-transparent md:bg-white h-full w-full"></div>
-        </div>
-      </div>
-    </section>
-    <!-- projects Section -->
-    <section
-      class="relative bg-white md:min-h-[100dvh] z-10 content-center max-[1000px]:pt-(--section-gap)">
-      <div class="container mx-auto">
-        <h2 class="text-4xl md:text-8xl mb-12">Projects</h2>
-      </div>
-
-      <div class="container max-[80rem]:!px-0 mx-auto">
-        <div class="projectCard w-full xl:w-[70%] bg-red xl:ml-20">
-          <div class="leftContent">
-            <div class="btnHolder flex gap-6">
-              <button
-                class="projectSlideBtn"
-                data-page="prev">
-                <svg
-                  width="24"
-                  height="24"
-                  style="scale: -1 1">
-                  <use href="#arrow-icon"></use>
-                </svg>
-              </button>
-              <button
-                class="projectSlideBtn"
-                data-page="next">
-                <svg
-                  width="24"
-                  height="24">
-                  <use href="#arrow-icon"></use>
-                </svg>
-              </button>
-            </div>
-            <div
-              id="splideProjectsLeft"
-              class="splide">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <div class="contentWrapper grid gap-4 xl:gap-12">
-                      <img
-                        src="./images/vega.png"
-                        alt="" />
-                      <p class="text-lg tracking-wider">
-                        Vega incorporates carefully chosen elements to bring the
-                        outdoors in, creating a rejuvenating living environment.
-                      </p>
-                      <button class="readMoreBtn">Read More</button>
-                    </div>
-                  </li>
-                  <li class="splide__slide">
-                    <div class="contentWrapper grid gap-4 xl:gap-12">
-                      <img
-                        src="./images/electra.png"
-                        alt="" />
-                      <p class="text-lg tracking-wider">
-                        This architectural masterpiece stands as a testament to
-                        opulence, where every facet of its design and amenities
-                        exudes a sense of grandeur.
-                      </p>
-                      <button class="readMoreBtn">Read More</button>
-                    </div>
-                  </li>
-                  <li class="splide__slide">
-                    <div class="contentWrapper grid gap-4 xl:gap-12">
-                      <img
-                        src="./images/adhara.png"
-                        alt="" />
-                      <p class="text-lg tracking-wider">
-                        A modern and extremely well-designed residential &
-                        retail project named after a bright star called Adhara
-                        in the northern hemisphere constellation Canis Major.
-                      </p>
-                      <button class="readMoreBtn">Read More</button>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="rightContent">
-            <div
-              id="splideProjectsRight"
-              class="splide">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <div class="contentWrapper">
-                      <img
-                        src="./images/industries-pics/vega.png"
-                        alt="" />
-                      <p class="txt uppercase">
-                        Interior / Exterior / Planning
-                      </p>
-                    </div>
-                  </li>
-                  <li class="splide__slide">
-                    <div class="contentWrapper">
-                      <img
-                        src="./images/industries-pics/electra.png"
-                        alt="" />
-                      <p class="txt uppercase">
-                        Interior / Exterior / Planning
-                      </p>
-                    </div>
-                  </li>
-                  <li class="splide__slide">
-                    <div class="contentWrapper">
-                      <img
-                        src="./images/industries-pics/vega.png"
-                        alt="" />
-                      <p class="txt uppercase">
-                        Interior / Exterior / Planning
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="relative w-full z-10 bg-dark pb-12">
-      <div class="container mx-auto pt-32">
-        <div class="txtWrapper text-white text-center leading-[1.2] font-light">
-          <h1 class="text-4xl md:text-8xl">
-            Sustainability at the <br />
-            heart of our craft
-          </h1>
-          <br />
-          <p class="max-w-[80ch] mx-auto text-xl tracking-wider">
-            At Acube Industries, exceptional design goes hand-in-hand with
-            sustainability. We are committed to reducing environmental impact
-            through innovative practices and responsible sourcing.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="relative bg-dark-white">
-      <div class="container mx-auto">
-        <!-- <video
-          src="./videos/vid1.mp4"
-          class="aspect-video object-cover w-full h-max"
-          autoplay
-          loop
-          ></video> -->
-        <a
-          href="#"
-          class="contents">
+        class="container mx-auto my-auto h-full grid grid-rows-[1fr_auto] min-h-[100dvh]">
+        <!-- <div class="grid grid-cols-2 w-full h-[calc(var(--section-gap)*3)]">
+          <div class="w-full h-full bg-transparent"></div>
+          <div class="w-full h-full bg-transparent"></div>
+        </div> -->
+        <div
+          class="flex flex-col flex-wrap w-full h-full gap-8 text-center md:gap-16 place-content-center content grow">
+          <h1 class="text-xl uppercase text-yellow">Core Values</h1>
           <div
-            class="YtVidWrapper aspect-video relative max-h-[700px] overflow-clip mx-auto">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/GL9Ah_r6ykc?si=5bcdM389GsHYtyPs&autoplay=1&mute=1&controls=0&playlist=GL9Ah_r6ykc&loop=1"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              controls="0"
-              class="aspect-video object-cover w-full h-auto"></iframe>
+            id="coreValueSlider"
+            class="splide"
+            aria-label="Core Values Slider">
+            <div class="splide__track">
+              <ul
+                class="splide__list"
+                style="word-break: break-word; overflow-wrap: break-word">
+                <li class="splide__slide">
+                  <div
+                    class="grid font-thin text-white group place-content-center splide__slide__container">
+                    <h2
+                      class="my-4 text-3xl tracking-widest uppercase md:text-5xl">
+                      Committed
+                    </h2>
+                    <p class="max-w-[60ch] text-lg">
+                      Acube Industries is a leading force in the UAE’s furniture
+                      and joinery industry, renowned for its dedication to
+                      precision, durability, and uncompromising quality. We
+                      specialize in crafting custom, high-end solutions that
+                      blend timeless elegance with modern functionality
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div
+                    class="grid font-thin text-white group place-content-center splide__slide__container">
+                    <h2
+                      class="my-4 text-3xl tracking-widest uppercase md:text-5xl">
+                      Committed
+                    </h2>
+                    <p class="max-w-[60ch] text-lg">
+                      Acube Industries is a leading force in the UAE’s furniture
+                      and joinery industry, renowned for its dedication to
+                      precision, durability, and uncompromising quality. We
+                      specialize in crafting custom, high-end solutions that
+                      blend timeless elegance with modern functionality
+                    </p>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div
+                    class="grid font-thin text-white group place-content-center splide__slide__container">
+                    <h2
+                      class="my-4 text-3xl tracking-widest uppercase md:text-5xl">
+                      Committed
+                    </h2>
+                    <p class="max-w-[60ch] text-lg">
+                      Acube Industries is a leading force in the UAE’s furniture
+                      and joinery industry, renowned for its dedication to
+                      precision, durability, and uncompromising quality. We
+                      specialize in crafting custom, high-end solutions that
+                      blend timeless elegance with modern functionality
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <ul
+              class="!relative !mt-4 md:!mt-8 !bottom-[unset] splide__pagination gap-2"></ul>
           </div>
-        </a>
+        </div>
+        <div
+          class="hidden md:grid grid-cols-2 w-full h-[calc(var(--section-gap)*3)]">
+          <div class="w-full h-full bg-transparent"></div>
+          <div class="w-full h-full bg-transparent md:bg-white"></div>
+        </div>
       </div>
     </section>
-    <footer class="bg-white relative">
-      <div class="container mx-auto pt-12">
+    <!-- MessageFrmCeo Section -->
+    <section class="w-full bg-white min-h-dvh">
+      <div class="container mx-auto">
+        <div class="grid md:grid-cols-2">
+          <div class="w-full h-full imgWrapper">
+            <img
+              src="./images/about/ceo.jpg"
+              class="object-cover w-full h-full max-h-[calc(100dvh_-_var(--section-gap)_*_3 )]"
+              style="max-height: calc(100dvh - var(--section-gap) * 3)" />
+          </div>
+          <div class="py-4 text-lg txtWrapper md:p-8 lg:p-24">
+            <h1 class="text-xl uppercase text-yellow">Ramjee Iyer</h1>
+            <h2 class="mt-4 mb-12 text-3xl font-thin md:text-5xl">
+              Message From The CEO
+            </h2>
+            <p class="my-6">
+              “At Acube Industries, our mission has always been to deliver
+              unparalleled craftsmanship, ensuring it shows in every project we
+              undertake. With decades of expertise in furniture manufacturing,
+              woodwork, joinery, and interior design, we’ve built a legacy of
+              trust and excellence that our clients can rely on.
+            </p>
+            <p class="my-6">
+              We understand that each client is unique, and so are their needs.
+              This is why we offer solutions tailored to meet varying
+              requirements. Every project reflects our unwavering commitment to
+              excellence, sustainability, and customer satisfaction.
+            </p>
+
+            <p class="my-6">
+              As we look to the future, we remain driven by a singular goal—to
+              be a trusted partner for our clients and a leader in the industry.
+              Together, let us continue to build spaces that shape a better
+              tomorrow.”
+            </p>
+          </div>
+        </div>
+        <div
+          class="hidden md:grid grid-cols-2 w-full h-[calc(var(--section-gap)*3)]">
+          <div class="w-full h-full bg-transparent md:bg-dark"></div>
+          <div class="w-full h-full bg-transparent md:bg-white"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full bg-black min-h-dvh">
+      <div class="container mx-auto">
+        <div class="grid md:grid-cols-2 min-h-dvh">
+          <div class="py-4 pt-16 text-lg text-white txtWrapper md:p-8 lg:p-24">
+            <h1 class="text-xl uppercase text-yellow">Team</h1>
+            <h2 class="mt-4 mb-12 text-3xl font-thin md:text-5xl">
+              We the people
+            </h2>
+            <p class="my-6">
+              “At Acube Industries, our mission has always been to deliver
+              unparalleled craftsmanship, ensuring it shows in every project we
+              undertake. With decades of expertise in furniture manufacturing,
+              woodwork, joinery, and interior design, we’ve built a legacy of
+              trust and excellence that our clients can rely on.
+            </p>
+            <p class="my-6">
+              We understand that each client is unique, and so are their needs.
+              This is why we offer solutions tailored to meet varying
+              requirements. Every project reflects our unwavering commitment to
+              excellence, sustainability, and customer satisfaction.
+            </p>
+
+            <p class="my-6">
+              As we look to the future, we remain driven by a singular goal—to
+              be a trusted partner for our clients and a leader in the industry.
+              Together, let us continue to build spaces that shape a better
+              tomorrow.”
+            </p>
+          </div>
+          <div class="grid w-full h-full grid-cols-4">
+            <div class="relative overflow-hidden teamCard group max-h-max">
+              <div
+                class="w-full h-full overflow-hidden transition-opacity imgWrapper group-hover:opacity-60">
+                <img
+                  src="./images/about/emp1.jpg"
+                  class="w-full h-full border-0 cover" />
+              </div>
+              <cite
+                class="absolute block font-normal text-white transition-transform translate-y-[200%] inset-x-2 group-hover:translate-y-0 bottom-2 non-italic"
+                >Mohamed Ali Tyson</cite
+              >
+            </div>
+            <!-- Script to repeat teamCard 15 mroe times with diff. img -->
+            <script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const teamCard = document.querySelector('.teamCard');
+                if (!teamCard) return;
+
+                const parent = teamCard.parentElement; // Get the parent container
+                const img = teamCard.querySelector('img'); // Get the first image
+                if (!img) return;
+
+                const baseSrc = img.src.replace(/emp\d+\.jpg$/, ''); // Extract base path
+                const totalCards = 15; // Total clones
+
+                for (let i = 2; i <= totalCards + 1; i++) {
+                  const clone = teamCard.cloneNode(true);
+                  const clonedImg = clone.querySelector('img');
+
+                  if (clonedImg) {
+                    clonedImg.src = `${baseSrc}emp${i}.jpg`; // Set new image src
+                  }
+
+                  parent.appendChild(clone); // Add cloned card to the parent
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="relative bg-white">
+      <div class="container pt-12 mx-auto">
         <img
           src="./images/Acube industries Gold.png"
           alt="" />
       </div>
-      <div class="container mx-auto py-6">
+      <div class="container py-6 mx-auto">
         <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 md:gap-x-24 gap-y-4 items-end">
+          class="grid items-end grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 md:gap-x-24 gap-y-4">
           <div class="col col-span-full md:col-span-1">
             <p>
               Unit R04-01, Level P2, The Onyx Tower 1, Sheik Zayed Road, Dubai,
@@ -553,7 +565,7 @@
         </div>
       </div>
       <div class="w-full bg-black">
-        <div class="container mx-auto text-white py-2 text-sm">
+        <div class="container py-2 mx-auto text-sm text-white">
           Copyright © 2025 Acube Industries All rights reserved.
         </div>
       </div>
