@@ -27,6 +27,13 @@
     <script
       defer
       src="./scripts/about.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      defer
+      src="https://unpkg.com/aos@next/dist/aos.js"
+      onload="AOS.init({disable:'tablet', duration:300, delay:100, offset:300});"></script>
   </head>
   <body>
     <svg
@@ -277,12 +284,17 @@
     <section class="w-full bg-white min-h-dvh">
       <div class="container mx-auto">
         <div class="grid md:grid-cols-2">
-          <div class="w-full h-full imgWrapper">
+          <div
+            class="w-full h-full imgWrapper"
+            data-aos="fade-up">
             <img
               src="./images/about/Who-we-are.jpg"
               class="object-cover w-full h-full max-h-dvh" />
           </div>
-          <div class="py-4 text-lg txtWrapper md:p-8 lg:p-24">
+          <div
+            class="py-4 text-lg txtWrapper md:p-8 lg:p-24"
+            data-aos="fade-down"
+            data-aos-delay="300">
             <h1 class="text-xl uppercase text-yellow">Who we Are</h1>
             <h2 class="mt-4 mb-12 text-3xl font-thin md:text-5xl">
               Specialize in crafting <br class="hidden md:block" />
@@ -397,13 +409,18 @@
     <section class="w-full bg-white min-h-dvh">
       <div class="container mx-auto">
         <div class="grid md:grid-cols-2">
-          <div class="w-full h-full imgWrapper">
+          <div
+            class="w-full h-full imgWrapper"
+            data-aos="flip-right"
+            data-aos-delay="300">
             <img
               src="./images/about/ceo.jpg"
               class="object-cover w-full h-full max-h-[calc(100dvh_-_var(--section-gap)_*_3 )]"
               style="max-height: calc(100dvh - var(--section-gap) * 3)" />
           </div>
-          <div class="py-4 text-lg txtWrapper md:p-8 lg:p-24">
+          <div
+            class="py-4 text-lg txtWrapper md:p-8 lg:p-24"
+            data-aos="fade-down">
             <h1 class="text-xl uppercase text-yellow">Ramjee Iyer</h1>
             <h2 class="mt-4 mb-12 text-3xl font-thin md:text-5xl">
               Message From The CEO
@@ -441,7 +458,10 @@
     <section class="w-full bg-black min-h-dvh">
       <div class="container mx-auto">
         <div class="grid md:grid-cols-2 min-h-dvh">
-          <div class="py-4 pt-16 text-lg text-white txtWrapper md:p-8 lg:p-24">
+          <div
+            class="py-4 pt-16 text-lg text-white txtWrapper md:p-8 lg:p-24"
+            data-aos="fade-down"
+            data-aos-delay="300">
             <h1 class="text-xl uppercase text-yellow">Team</h1>
             <h2 class="mt-4 mb-12 text-3xl font-thin md:text-5xl">
               We the people
@@ -467,7 +487,9 @@
               tomorrow.”
             </p>
           </div>
-          <div class="grid w-full h-full grid-cols-4">
+          <div
+            class="grid w-full h-full grid-cols-4"
+            data-aos="zoom-in">
             <div class="relative overflow-hidden teamCard group max-h-max">
               <div
                 class="w-full h-full overflow-hidden transition-opacity imgWrapper group-hover:opacity-60">
