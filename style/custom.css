@@ -521,3 +521,63 @@ footer .col {
 .page-rounded-rect.is-active {
   transform: scale(1) !important;
 }
+
+.formHolder form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 25rem;
+  margin-inline: auto;
+  gap: 2rem;
+}
+
+.formHolder :is(input, textarea) {
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  color: white;
+  width: 100%;
+  resize: none;
+}
+
+.formHolder :is(input, textarea)::placeholder {
+  color: #ffffffd3;
+}
+
+.formHolder :is(input, textarea):focus-within {
+  outline: none;
+}
+
+.formHolder .inputGroup {
+  position: relative;
+  width: 100%;
+}
+
+.formHolder .inputGroup::before,
+.formHolder .inputGroup::after {
+  position: absolute;
+  bottom: -0.75rem;
+  inset-inline: 0;
+  height: 2px;
+  content: '';
+}
+
+.formHolder .inputGroup::before {
+  background-color: #333;
+}
+.formHolder .inputGroup::after {
+  background-color: var(--color-yellow);
+  scale: 0 1;
+  transition: scale 300ms ease;
+}
+
+.formHolder .inputGroup::after {
+  background-color: var(--color-yellow);
+  scale: 0 1;
+  transition: scale 300ms ease-in-out;
+  transform-origin: 0;
+}
+.formHolder .inputGroup:focus-within:after {
+  scale: 1;
+}
