@@ -11,7 +11,7 @@ img.bannerVid {
 }
 
 @media (max-width: 1000px) {
-  .bannerVid:has(video) {
+  :is(video, iframe).bannerVid {
     width: auto;
     transform: translateX(-50%);
   }
