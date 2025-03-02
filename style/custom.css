@@ -26,7 +26,7 @@ img.bannerVid {
 .darkgradOverlay:after {
   position: absolute;
   inset: 0;
-  content: '';
+  content: "";
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.3) 0%,
@@ -105,7 +105,7 @@ img.bannerVid {
 }
 
 .circleBefore:before {
-  content: '';
+  content: "";
   height: 0.75rem;
   width: 0.75rem;
   border-radius: 50%;
@@ -122,13 +122,13 @@ img.bannerVid {
   opacity: 0.4;
   position: absolute;
   inset: 0;
-  content: '';
+  content: "";
 }
 .line:after {
   position: absolute;
   inset: 0;
   background-color: #ebc554;
-  content: '';
+  content: "";
   transform: scaleX(0);
   transition: transform 400ms ease;
   will-change: transform;
@@ -169,7 +169,7 @@ section.services .imgWrapper:after {
   background-color: black;
   opacity: 0.3;
   inset: 0;
-  content: '';
+  content: "";
   scale: 1;
   transition: scale 400ms ease;
 }
@@ -320,7 +320,7 @@ section.services .card:hover .txtWrapper .title {
   position: absolute;
   inset: 0;
   z-index: 10;
-  content: '';
+  content: "";
 }
 
 footer svg {
@@ -401,7 +401,7 @@ a {
 .close:after {
   position: absolute;
   left: calc(15 / 33 * 100%);
-  content: ' ';
+  content: " ";
   height: var(--diagonal);
   width: 3px;
   background-color: #fff;
@@ -482,7 +482,7 @@ a {
   pointer-events: none;
 }
 
-[data-menu='open'] .menuOverlay {
+[data-menu="open"] .menuOverlay {
   pointer-events: initial;
 }
 .menuOverlay :is(.grid-item-right, .grid-item-left) {
@@ -495,10 +495,10 @@ a {
 .menuOverlay .grid-item-right {
   transform: translateY(-150vh);
 }
-[data-menu='open'] .menuOverlay :is(.grid-item-left, .grid-item-right) {
+[data-menu="open"] .menuOverlay :is(.grid-item-left, .grid-item-right) {
   transform: translateY(0vh);
 }
-body[data-menu='open'] {
+body[data-menu="open"] {
   overflow: hidden;
 }
 
@@ -560,7 +560,7 @@ footer .col {
   bottom: -0.75rem;
   inset-inline: 0;
   height: 2px;
-  content: '';
+  content: "";
 }
 
 .formHolder .inputGroup::before {
@@ -583,5 +583,33 @@ footer .col {
 }
 
 .dashList li:before {
-  content: '- ';
+  content: "- ";
+}
+.serviceSplide .imgWrapper {
+  background: linear-gradient(to bottom, transparent, 80%, rgba(0, 0, 0, 0.6));
+}
+.serviceSplide .imgWrapper img {
+  mix-blend-mode: multiply;
+}
+.serviceSplide .splide__pagination {
+  bottom: 5%;
+}
+
+footer .container {
+  width: 100%;
+  @media (width >= 40rem) {
+    max-width: 40rem;
+  }
+  @media (width >= 48rem) {
+    max-width: 48rem;
+  }
+  @media (width >= 64rem) {
+    max-width: 64rem;
+  }
+  @media (width >= 80rem) {
+    max-width: 80rem;
+  }
+  @media (width >= 96rem) {
+    max-width: 96rem;
+  }
 }
