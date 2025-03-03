@@ -163,4 +163,20 @@ document.addEventListener('DOMContentLoaded', () => {
   closeBtn.addEventListener('click', () => {
     body.setAttribute('data-menu', 'close');
   });
+
+  document.querySelectorAll('header .menuOverlay a').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const url = new URL(link.href, window.location.href); // Resolve relative links
+      console.log('Url', url);
+      if (
+        url.origin === window.location.origin &&
+        url.pathname === window.location.pathname
+      ) {
+        const targetId = url.hash; // Get the hash (e.g., #section)
+        if (targetId && document.querySelector(targetId)) {
+          document.body.setAttribute('data-menu', 'close');
+        }
+      }
+    });
+  });
 });
