@@ -249,245 +249,181 @@
       </div>
     </header>
 
-    <!-- Banner -->
-    <section
-      class="w-full min-h-[100dvh] relative overflow-clip -mt-(--headerHeight) z-10 max-[1000px]:pb-(--section-gap)">
+    <!-- News Detail Section -->
+    <article class="w-full min-h-[100dvh] relative bg-white">
       <div
-        class="absolute inset-0 m-auto darkgradOverlay min-h-[100dvh] overflow-clip">
-        <img
-          src="./images/Media/media-top-bg.jpg"
-          class="object-center w-full h-auto aspect-video bannerVid" />
-      </div>
-      <div class="container absolute inset-0 grid m-auto place-content-center">
-        <div class="bannerContent">
-          <h1
-            class="grid text-center place-content-center max-w-[19ch] font-light text-5xl md:text-6xl">
-            <span
-              class="content-center block mx-auto mb-2 text-4xl uppercase max-w-max text-yellow"
-              >Media</span
-            >
-            <span
-              class="text-5xl md:text-6xl uppercase font-extralight leading-[1.1]">
-              News / Publication
-            </span>
+        class="container grid gap-x-24 2xl:gap-x-32 gap-y-8 mx-auto text-xl md:text-2xl lg:grid-cols-[20ch_1fr] place-content-center py-16 xl:py-32">
+        <div class="grid content-center gap-4 md:gap-6 txtWrapper">
+          <time
+            datetime="2025-02-17"
+            class="text-base md:text-lg text-yellow"
+            >17 . 02 . 25</time
+          >
+          <h1 class="text-xl uppercase md:text-2xl">
+            Transforming Spaces: The Future of Interior Design Unveiled
           </h1>
+          <div class="line h-4 w-[50%] bg-yellow"></div>
+          <div class="flex flex-wrap gap-4 socials">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-whatsapp"
+                viewBox="0 0 16 16">
+                <path
+                  d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-twitter-x"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="imgWrapper">
+          <img
+            src="./images/Media details/news-top.jpg"
+            alt="Media Detail Image"
+            class="w-full" />
         </div>
       </div>
-    </section>
+      <div
+        class="container mx-auto grid lg:grid-cols-[1fr_20rem] gap-16 pb-16 xl:pb-32">
+        <div class="text-base content md:text-lg">
+          <p>
+            In a world where aesthetics and functionality go hand in hand,
+            interior design is evolving like never before. At Acube Industries,
+            we are redefining spaces with innovative concepts that blend style,
+            comfort, and sustainability.
+          </p>
+          <h2>Embracing Modern Trends</h2>
+          <p>
+            The future of interior design is all about personalization and smart
+            solutions. From multifunctional furniture to tech-integrated spaces,
+            homeowners are looking for designs that not only look stunning but
+            also enhance their everyday lives.
+          </p>
 
-    <!-- News Section -->
-    <section class="w-full min-h-[100dvh] relative">
-      <div class="container grid gap-4 mx-auto md:grid-cols-2">
-        <div
-          class="relative z-10 newsCard"
-          data-aos="fade-left">
-          <a
-            href="#"
-            class="contents">
-            <div class="inset-0 overflow-hidden imgWrapper abolute">
-              <img
-                src="./images/Media/img1.jpg"
-                alt=""
-                class="object-cover object-center w-full h-full" />
-            </div>
-            <div
-              class="absolute inset-0 txtWrapper p-[min(5%,_2rem)] lg:p-[min(10%,_4rem)]">
-              <time
-                datetime="2025-02-17"
-                class="text-base text-yellow md:text-lg"
-                >17 . 02 . 25</time
-              >
-              <h1
-                class="text-lg text-white uppercase md:text-xl max-w-[25ch] font-medium">
-                The Future of Interior Design Unveiled
-              </h1>
-            </div>
-          </a>
+          <h2>Sustainability at the Core</h2>
+          <p>
+            Eco-friendly interiors are gaining momentum, with sustainable
+            materials, energy-efficient lighting, and recycled décor pieces
+            becoming top choices. Acube Industries is committed to designing
+            spaces that are both elegant and environmentally responsible.
+          </p>
+
+          <h2>Minimalism Meets Luxury</h2>
+          <p>
+            The balance between minimalism and luxury is a defining trend in
+            modern interiors. Sleek designs, neutral palettes, and carefully
+            curated statement pieces create a sophisticated yet warm ambiance.
+          </p>
+
+          <h2>Smart Homes, Smarter Designs</h2>
+          <p>
+            With the rise of smart home technology, interior design is becoming
+            more intuitive. Automated lighting, voice-controlled appliances, and
+            space-saving furniture are revolutionizing the way we experience our
+            homes.
+          </p>
+
+          <h2>Final Thoughts</h2>
+          <p>
+            At Acube Industries we believe that a well-designed space can uplift
+            mood, boost productivity, and create lasting impressions. As we step
+            into the future, our focus remains on crafting interiors that are
+            timeless, functional, and uniquely tailored to each client’s vision.
+          </p>
+
+          <p>
+            <strong>
+              Ready to transform your space? Contact us today to bring your
+              dream interiors to life!
+            </strong>
+          </p>
         </div>
-        <div
-          class="relative z-10 newsCard"
-          data-aos="fade-right">
-          <a
-            href="#"
-            class="contents">
-            <div class="inset-0 overflow-hidden imgWrapper abolute">
-              <img
-                src="./images/Media/img2.jpg"
-                alt=""
-                class="object-cover object-center w-full h-full" />
-            </div>
-            <div
-              class="absolute inset-0 txtWrapper p-[min(5%,_2rem)] lg:p-[min(10%,_4rem)]">
-              <time
-                datetime="2025-02-17"
-                class="text-base text-yellow md:text-lg"
-                >17 . 02 . 25</time
-              >
-              <h1
-                class="text-lg text-white uppercase md:text-xl max-w-[25ch] font-medium">
-                ACUBE Sets New Trends in Home Decor
-              </h1>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative z-10 newsCard"
-          data-aos="fade-left">
-          <a
-            href="#"
-            class="contents">
-            <div class="inset-0 overflow-hidden imgWrapper abolute">
-              <img
-                src="./images/Media/img3.jpg"
-                alt=""
-                class="object-cover object-center w-full h-full" />
-            </div>
-            <div
-              class="absolute inset-0 txtWrapper p-[min(5%,_2rem)] lg:p-[min(10%,_4rem)]">
-              <time
-                datetime="2025-02-17"
-                class="text-base text-yellow md:text-lg"
-                >17 . 02 . 25</time
-              >
-              <h1
-                class="text-lg text-white uppercase md:text-xl max-w-[25ch] font-medium">
-                Bringing Elegance Home: The Latest Interior Design Inspirations
-              </h1>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative z-10 newsCard"
-          data-aos="fade-right">
-          <a
-            href="#"
-            class="contents">
-            <div class="inset-0 overflow-hidden imgWrapper abolute">
-              <img
-                src="./images/Media/img4.jpg"
-                alt=""
-                class="object-cover object-center w-full h-full" />
-            </div>
-            <div
-              class="absolute inset-0 txtWrapper p-[min(5%,_2rem)] lg:p-[min(10%,_4rem)]">
-              <time
-                datetime="2025-02-17"
-                class="text-base text-yellow md:text-lg"
-                >17 . 02 . 25</time
-              >
-              <h1
-                class="text-lg text-white uppercase md:text-xl max-w-[25ch] font-medium">
-                Luxury Meets Functionality: Interior Trends to Watch
-              </h1>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative z-10 newsCard"
-          data-aos="fade-left">
-          <a
-            href="#"
-            class="contents">
-            <div class="inset-0 overflow-hidden imgWrapper abolute">
-              <img
-                src="./images/Media/img5.jpg"
-                alt=""
-                class="object-cover object-center w-full h-full" />
-            </div>
-            <div
-              class="absolute inset-0 txtWrapper p-[min(5%,_2rem)] lg:p-[min(10%,_4rem)]">
-              <time
-                datetime="2025-02-17"
-                class="text-base text-yellow md:text-lg"
-                >17 . 02 . 25</time
-              >
-              <h1
-                class="text-lg text-white uppercase md:text-xl max-w-[25ch] font-medium">
-                From Concept to Reality: Stunning Makeovers by ACUBE
-              </h1>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative z-10 newsCard"
-          data-aos="fade-right">
-          <a
-            href="#"
-            class="contents">
-            <div class="inset-0 overflow-hidden imgWrapper abolute">
-              <img
-                src="./images/Media/img6.jpg"
-                alt=""
-                class="object-cover object-center w-full h-full" />
-            </div>
-            <div
-              class="absolute inset-0 txtWrapper p-[min(5%,_2rem)] lg:p-[min(10%,_4rem)]">
-              <time
-                datetime="2025-02-17"
-                class="text-base text-yellow md:text-lg"
-                >17 . 02 . 25</time
-              >
-              <h1
-                class="text-lg text-white uppercase md:text-xl max-w-[25ch] font-medium">
-                Revolutionizing Interiors: Smart Designs for Modern Living
-              </h1>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative z-10 newsCard"
-          data-aos="fade-left">
-          <a
-            href="#"
-            class="contents">
-            <div class="inset-0 overflow-hidden imgWrapper abolute">
-              <img
-                src="./images/Media/img7.jpg"
-                alt=""
-                class="object-cover object-center w-full h-full" />
-            </div>
-            <div
-              class="absolute inset-0 txtWrapper p-[min(5%,_2rem)] lg:p-[min(10%,_4rem)]">
-              <time
-                datetime="2025-02-17"
-                class="text-base text-yellow md:text-lg"
-                >17 . 02 . 25</time
-              >
-              <h1
-                class="text-lg text-white uppercase md:text-xl max-w-[25ch] font-medium">
-                The Art of Interiors: Blending Aesthetics with Comfort
-              </h1>
-            </div>
-          </a>
-        </div>
-        <div
-          class="relative z-10 newsCard"
-          data-aos="fade-right">
-          <a
-            href="#"
-            class="contents">
-            <div class="inset-0 overflow-hidden imgWrapper abolute">
-              <img
-                src="./images/Media/img8.jpg"
-                alt=""
-                class="object-cover object-center w-full h-full" />
-            </div>
-            <div
-              class="absolute inset-0 txtWrapper p-[min(5%,_2rem)] lg:p-[min(10%,_4rem)]">
-              <time
-                datetime="2025-02-17"
-                class="text-base text-yellow md:text-lg"
-                >17 . 02 . 25</time
-              >
-              <h1
-                class="text-lg text-white uppercase md:text-xl max-w-[25ch] font-medium">
-                Your Dream Space Awaits: Custom Interiors by ACUBE
-              </h1>
-            </div>
-          </a>
-        </div>
+        <aside
+          class="sticky grid gap-6 overflow-auto top-4 grid-auto-row-max max-h-max">
+          <h1 class="text-xl uppercase md:text-2xl">Other</h1>
+          <div class="grid gap-4 p-6 bg-gray otherCard group">
+            <time
+              datetime="2025-02-17"
+              class="text-base md:text-lg text-yellow"
+              >17 . 02 . 25</time
+            >
+            <h2 class="text-base uppercase md:text-lg">
+              Sustainable & Stylish: Eco-Friendly Interior Solutions
+            </h2>
+            <p class="!pb-0 line-clamp-3 text-sm">
+              Automated lighting, voice-controlled appliances, and space-saving
+              furniture are revolutionizing the way we experience our homes.
+            </p>
+          </div>
+          <div class="grid gap-4 p-6 bg-gray otherCard group">
+            <time
+              datetime="2025-02-17"
+              class="text-base md:text-lg text-yellow"
+              >17 . 02 . 25</time
+            >
+            <h2 class="text-base uppercase md:text-lg">
+              Bringing Elegance Home: The Latest Interior Design Inspirations
+            </h2>
+            <p class="!pb-0 line-clamp-3 text-sm">
+              Automated lighting, voice-controlled appliances, and space-saving
+              furniture are revolutionizing the way we experience our homes.
+            </p>
+          </div>
+          <div class="grid gap-4 p-6 bg-gray otherCard group">
+            <time
+              datetime="2025-02-17"
+              class="text-base md:text-lg text-yellow"
+              >17 . 02 . 25</time
+            >
+            <h2 class="text-base uppercase md:text-lg">
+              Revolutionizing Interiors: Smart Designs for Modern Living
+            </h2>
+            <p class="!pb-0 line-clamp-3 text-sm">
+              Automated lighting, voice-controlled appliances, and space-saving
+              furniture are revolutionizing the way we experience our homes.
+            </p>
+          </div>
+        </aside>
       </div>
-    </section>
+    </article>
 
     <footer class="relative bg-white">
       <div class="container pt-12 mx-auto">

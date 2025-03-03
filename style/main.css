@@ -8,6 +8,7 @@
   --color-golden: #d9c8a9;
   --color-yellow: #b7973e;
   --section-gap: 2rem;
+  --color-gray: #f3f3f3;
 }
 
 @font-face {
@@ -47,4 +48,12 @@ body {
 
 .container {
   @apply px-4;
+}
+
+article h2 {
+  @apply text-lg md:text-xl;
+}
+
+article p {
+  @apply pb-6;
 }

@@ -690,3 +690,32 @@ footer .container {
     }
   }
 }
+
+article .socials svg {
+  height: 1.5rem;
+  width: auto;
+}
+
+.bi-whatsapp {
+  color: #25d366;
+}
+.bi-facebook {
+  color: #1773ea;
+}
+
+.bi-linkedin {
+  color: #007bb5;
+}
+
+article .container {
+  width: 100%;
+  @media (width >= 64rem) {
+    max-width: calc(64rem);
+  }
+  @media (width >= 80rem) {
+    max-width: calc(68.75rem);
+  }
+  @media (width >= 96rem) {
+    max-width: calc(68.75rem);
+  }
+}
