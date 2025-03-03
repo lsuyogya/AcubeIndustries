@@ -652,17 +652,17 @@ footer .container {
     position: absolute;
     inset: 0; /* shorthand for top/right/bottom/left: 0 */
     background: radial-gradient(
-      transparent,
-      rgba(0, 0, 0, var(--gradient-alpha)),
-      rgba(0, 0, 0, var(--gradient-beta))
+      rgba(0, 0, 0, var(--gradient-beta)),
+      rgba(0, 0, 0, var(--gradient-alpha))
     );
     --gradient-alpha: 0.8;
+    --gradient-beta: 0.2;
     transition: --gradient-alpha 400ms ease, --gradient-beta 400ms ease;
   }
 
   &:hover .imgWrapper::after {
     --gradient-alpha: 0.3;
-    --gradient-beta: 0.6;
+    --gradient-beta: 0;
   }
 
   /* For older browsers */
@@ -691,27 +691,6 @@ footer .container {
     --gradient-alpha: 0.8;
     --gradient-beta: 0.2;
     transition: --gradient-alpha 400ms ease, --gradient-beta 400ms ease;
-  }
-
-  &:hover .imgWrapper::after {
-    --gradient-alpha: 0.3;
-    --gradient-beta: 0;
-  }
-
-  /* For older browsers */
-  @supports not (
-    background:
-      radial-gradient(transparent, rgba(0, 0, 0, var(--gradient-alpha)))
-  ) {
-    .imgWrapper::after {
-      background: radial-gradient(transparent, rgba(0, 0, 0, 0.8));
-      opacity: 1;
-      transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    &:hover .imgWrapper::after {
-      opacity: 0;
-    }
   }
 }
 .newsCard {
