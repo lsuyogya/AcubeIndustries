@@ -625,7 +625,8 @@ footer .container {
   initial-value: 0.7;
   inherits: false;
 }
-.newsCard {
+.newsCard,
+.projectsCard {
   &::after {
     inset: 0;
     height: 1rem;
@@ -636,17 +637,7 @@ footer .container {
     scale: 0 1;
     transition: scale 200ms ease-in-out;
   }
-  @media (min-width: 48rem) {
-    &:nth-child(odd)::after {
-      transform-origin: right;
-    }
-    &:nth-child(even)::after {
-      transform-origin: left;
-    }
-    &:nth-child(even) {
-      margin-top: calc(var(--section-gap) * -3);
-    }
-  }
+
   &:hover::after {
     scale: 1 1;
   }
@@ -690,7 +681,19 @@ footer .container {
     }
   }
 }
-
+.newsCard {
+  @media (min-width: 48rem) {
+    &:nth-child(odd)::after {
+      transform-origin: right;
+    }
+    &:nth-child(even)::after {
+      transform-origin: left;
+    }
+    &:nth-child(even) {
+      margin-top: calc(var(--section-gap) * -3);
+    }
+  }
+}
 article .socials svg {
   height: 1.5rem;
   width: auto;

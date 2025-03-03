@@ -9,6 +9,7 @@
   --color-yellow: #b7973e;
   --section-gap: 2rem;
   --color-gray: #f3f3f3;
+  --headerHeight: 93px;
 }
 
 @font-face {
