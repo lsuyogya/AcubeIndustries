@@ -591,6 +591,11 @@ footer .col {
 :is(.serviceSplide, #projectDetail) .imgWrapper img {
   mix-blend-mode: multiply;
 }
+@media (min-width: 1000px) {
+  :is(.serviceSplide, #projectDetail) .imgWrapper img {
+    height: 100vh;
+  }
+}
 .serviceSplide .splide__pagination {
   bottom: 5%;
 }
@@ -733,33 +738,4 @@ article .container {
   @media (width >= 96rem) {
     max-width: calc(68.75rem);
   }
-}
-
-@view-transition {
-  navigation: auto;
-}
-
-/* Create a custom animation */
-@keyframes move-out {
-  from {
-    transform: translateY(0%);
-  }
-
-  to {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes move-in {
-  from {
-    transform: translateY(100%);
-  }
-
-  to {
-    transform: translateY(0%);
-  }
-}
-
-::view-transition-new(root) {
-  animation: 0.4s ease-in forwards move-in;
 }

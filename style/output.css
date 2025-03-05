@@ -722,6 +722,9 @@
   .h-screen {
     height: 100vh;
   }
+  .max-h-\[100dvh\] {
+    max-height: 100dvh;
+  }
   .max-h-\[700px\] {
     max-height: 700px;
   }
@@ -730,6 +733,9 @@
   }
   .max-h-max {
     max-height: max-content;
+  }
+  .max-h-screen {
+    max-height: 100vh;
   }
   .min-h-\[50dvh\] {
     min-height: 50dvh;
@@ -1125,10 +1131,6 @@
   .opacity-60 {
     opacity: 60%;
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
@@ -1155,10 +1157,6 @@
   .duration-400 {
     --tw-duration: 400ms;
     transition-duration: 400ms;
-  }
-  .ease-in {
-    --tw-ease: var(--ease-in);
-    transition-timing-function: var(--ease-in);
   }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
@@ -1265,6 +1263,16 @@
       margin-bottom: 350vh;
     }
   }
+  .md\:sticky {
+    @media (width >= 48rem) {
+      position: sticky;
+    }
+  }
+  .md\:top-0 {
+    @media (width >= 48rem) {
+      top: calc(var(--spacing) * 0);
+    }
+  }
   .md\:col-span-1 {
     @media (width >= 48rem) {
       grid-column: span 1 / span 1;
@@ -1293,6 +1301,11 @@
   .md\:grid {
     @media (width >= 48rem) {
       display: grid;
+    }
+  }
+  .md\:max-h-\[100dvh\] {
+    @media (width >= 48rem) {
+      max-height: 100dvh;
     }
   }
   .md\:min-h-\[100dvh\] {
@@ -1599,11 +1612,6 @@ article .content p {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-blur {
   syntax: "*";
